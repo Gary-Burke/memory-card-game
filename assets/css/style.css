@@ -11,7 +11,7 @@
 
 /* General CSS */
 body {
-    background: var(--primary-bg-color) url("../images/background.webp") repeat 0px 0px / cover;
+    background: var(--primary-bg-color) url("../images/background-small.webp") repeat 0px 0px / cover;
     font-family: var(--secondary-font);
     color: var(--primary-font-color);
 }
@@ -34,4 +34,13 @@ button {
 
 #home button:hover {
     box-shadow: 0 0 6px 1px var(--primary-font-color);
+}
+
+/* Media Queries*/
+
+/* Medium screen sizes - 768px up*/
+@media screen and (min-width: 768px) {
+    body {
+        background: var(--primary-bg-color) url("../images/background.webp") repeat 0px 0px / cover;
+    }
 }
