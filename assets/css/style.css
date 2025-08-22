@@ -5,11 +5,12 @@
 :root {
     --primary-font: "Libre Baskerville", serif;
     --primary-font-color: #FEFEFA; 
+    --primary-bg-color: #241E1A;
 }
 
 /* General CSS */
 body {
-    background: #241E1A url("../images/background.webp") repeat 0px 0px / cover;
+    background: var(--primary-bg-color) url("../images/background.webp") repeat 0px 0px / cover;
     font-family: var(--primary-font);
     color: var(--primary-font-color);
 }
@@ -17,4 +18,17 @@ body {
 h1 {
     font-size: 2.6rem;
     letter-spacing: 0.3rem;
+}
+
+button {
+    background-color: var(--primary-bg-color);
+    padding: 1rem 0;
+    border: var(--primary-font-color) ridge 5px;
+    color: var(--primary-font-color);
+    font-size: 1.5rem;
+    box-shadow: inset 0 0 10px 6px black;
+}
+
+#home button:hover {
+    box-shadow: 0 0 6px 1px var(--primary-font-color);
 }
