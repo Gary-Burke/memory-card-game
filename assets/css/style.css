@@ -6,12 +6,12 @@
     --primary-font: "Libre Baskerville", serif;
     --secondary-font: "Libre Franklin", sans-serif;
     --primary-font-color: #FEFEFA; 
-    --primary-bg-color: #35302C;
+    --primary-bg-color: #5c636a;
 }
 
 /* General CSS */
 body {
-    background: var(--primary-bg-color) url("../images/background-small.webp") repeat 0px 0px / cover;
+    background: #35302C url("../images/background-small.webp") repeat 0px 0px / cover;
     font-family: var(--secondary-font);
     color: var(--primary-font-color);
 }
@@ -28,34 +28,37 @@ button {
     border: var(--primary-font-color) ridge 5px;
     color: var(--primary-font-color);
     font-size: 1.5rem;
-    box-shadow: inset 0 0 10px 6px black;
+    box-shadow: inset 0 0 16px 10px black;
     font-family: var(--primary-font);
 }
 
 button:hover {
-    box-shadow: 0 0 6px 1px var(--primary-font-color);
+    box-shadow: inset 0 0 16px 10px black, 
+    0 0 6px 3px var(--primary-font-color);
+    
 }
 
 /* Instructions Modal */
 .modal-content {
     background-color: var(--primary-bg-color);
     color: var(--primary-font-color);
-    border-color: var(--primary-font-color);
+    border: var(--primary-font-color) 4px ridge;
 }
 
 .modal-content button {
     background-color: var(--primary-bg-color);
-    border: var(--primary-font-color) ridge 3px;
-    color: var(--primary-font-color);
-    box-shadow: inset 0 0 10px 6px black;
+    border: var(--primary-font-color) ridge 2px;
     font-family: var(--primary-font);
+    box-shadow: inset 0 0 8px 3px black;
 }
+
+
 
 /* Media Queries*/
 
 /* Medium screen sizes - 768px up*/
 @media screen and (min-width: 768px) {
     body {
-        background: var(--primary-bg-color) url("../images/background.webp") repeat 0px 0px / cover;
+        background: #35302C url("../images/background.webp") repeat 0px 0px / cover;
     }
 }
