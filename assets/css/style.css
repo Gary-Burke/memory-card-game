@@ -1,0 +1,21 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-font: "Libre Baskerville", serif;
+    --primary-font-color: #FEFEFA; 
+}
+
+/* General CSS */
+body {
+    background: #241E1A url("../images/background.webp") no-repeat 0px 0px / cover;
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+}
