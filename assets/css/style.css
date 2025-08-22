@@ -6,7 +6,7 @@
     --primary-font: "Libre Baskerville", serif;
     --secondary-font: "Libre Franklin", sans-serif;
     --primary-font-color: #FEFEFA; 
-    --primary-bg-color: #241E1A;
+    --primary-bg-color: #35302C;
 }
 
 /* General CSS */
@@ -32,8 +32,23 @@ button {
     font-family: var(--primary-font);
 }
 
-#home button:hover {
+button:hover {
     box-shadow: 0 0 6px 1px var(--primary-font-color);
+}
+
+/* Instructions Modal */
+.modal-content {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
+    border-color: var(--primary-font-color);
+}
+
+.modal-content button {
+    background-color: var(--primary-bg-color);
+    border: var(--primary-font-color) ridge 3px;
+    color: var(--primary-font-color);
+    box-shadow: inset 0 0 10px 6px black;
+    font-family: var(--primary-font);
 }
 
 /* Media Queries*/
