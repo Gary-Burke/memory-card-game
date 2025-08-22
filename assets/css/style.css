@@ -6,7 +6,7 @@
     --primary-font: "Libre Baskerville", serif;
     --secondary-font: "Libre Franklin", sans-serif;
     --primary-font-color: #FEFEFA; 
-    --primary-bg-color: #5c636a;
+    --primary-bg-color: #5c636a; 
 }
 
 /* General CSS */
@@ -17,8 +17,7 @@ body {
 }
 
 h1 {
-    font-size: 2.6rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-family: var(--primary-font);
 }
 
