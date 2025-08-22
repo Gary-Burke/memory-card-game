@@ -9,7 +9,7 @@
 
 /* General CSS */
 body {
-    background: #241E1A url("../images/background.webp") no-repeat 0px 0px / cover;
+    background: #241E1A url("../images/background.webp") repeat 0px 0px / cover;
     font-family: var(--primary-font);
     color: var(--primary-font-color);
 }
