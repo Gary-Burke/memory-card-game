@@ -1,9 +1,10 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin&display=swap');
 
 /* CSS Variables */
 :root {
     --primary-font: "Libre Baskerville", serif;
+    --secondary-font: "Libre Franklin", sans-serif;
     --primary-font-color: #FEFEFA; 
     --primary-bg-color: #241E1A;
 }
@@ -11,13 +12,14 @@
 /* General CSS */
 body {
     background: var(--primary-bg-color) url("../images/background.webp") repeat 0px 0px / cover;
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     color: var(--primary-font-color);
 }
 
 h1 {
     font-size: 2.6rem;
     letter-spacing: 0.3rem;
+    font-family: var(--primary-font);
 }
 
 button {
@@ -27,6 +29,7 @@ button {
     color: var(--primary-font-color);
     font-size: 1.5rem;
     box-shadow: inset 0 0 10px 6px black;
+    font-family: var(--primary-font);
 }
 
 #home button:hover {
