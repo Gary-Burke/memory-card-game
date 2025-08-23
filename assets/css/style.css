@@ -5,8 +5,8 @@
 :root {
     --primary-font: "Libre Baskerville", serif;
     --secondary-font: "Libre Franklin", sans-serif;
-    --primary-font-color: #FEFEFA; 
-    --primary-bg-color: #5c636a; 
+    --primary-font-color: #FEFEFA;
+    --primary-bg-color: #5c636a;
 }
 
 /* General CSS */
@@ -32,9 +32,9 @@ button {
 }
 
 button:hover {
-    box-shadow: inset 0 0 16px 10px black, 
-    0 0 6px 3px var(--primary-font-color);
-    
+    box-shadow: inset 0 0 16px 10px black,
+        0 0 6px 3px var(--primary-font-color);
+
 }
 
 /* Instructions Modal */
@@ -51,7 +51,20 @@ button:hover {
     box-shadow: inset 0 0 8px 3px black;
 }
 
+/* Game Page */
+.card {
+    width: 60px;
+    height: 60px;
+    border: black 1px solid;
+    margin: 0.4rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 1px rgb(18, 18, 18);
+    transition: 0.4s;
+}
 
+.card:hover {
+    box-shadow: 0 0 6px 3px var(--primary-font-color);
+}
 
 /* Media Queries*/
 
