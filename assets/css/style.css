@@ -53,10 +53,9 @@ button:hover {
 
 /* Game Page */
 .card {
-    width: 60px;
-    height: 60px;
+    aspect-ratio: 1 / 1;
+    /* height = width */
     border: black 1px solid;
-    margin: 0.4rem;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 2px 1px rgb(18, 18, 18);
     transition: 0.4s;
@@ -66,11 +65,38 @@ button:hover {
     box-shadow: 0 0 6px 3px var(--primary-font-color);
 }
 
+/* #board {
+    border: white solid 1px;
+} */
+
 /* Media Queries*/
+
+/* Large screen sizes - 576px up*/
+@media screen and (min-width: 576px) {
+
+    /* Ensure cards don't get too big on bigger screens */
+    #board {
+        width: 70vw;
+    }
+}
 
 /* Medium screen sizes - 768px up*/
 @media screen and (min-width: 768px) {
     body {
         background: #35302C url("../images/background.webp") repeat 0px 0px / cover;
+    }
+
+    /* Ensure cards don't get too big on bigger screens */
+    #board {
+        width: 80vw;
+    }
+}
+
+/* Large screen sizes - 992px up*/
+@media screen and (min-width: 992px) {
+
+    /* Ensure cards don't get too big on bigger screens */
+    #board {
+        width: 50vw;
     }
 }
