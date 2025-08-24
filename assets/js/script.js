@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let cards = document.getElementsByClassName("card");
 
     for (card of cards) {
+        cardContent(cards);
         faceDown(card);
         card.addEventListener("click", game);
     }
@@ -28,4 +29,17 @@ function faceDown(card) {
 function game(e) {
     let card = e.target;
     card.classList.toggle("card-blank");
+}
+
+
+/**
+ * Assign images by classes to cards in matching pairs
+ */
+function cardContent(cards) {
+    cards[0].classList.add("card-1");
+    cards[3].classList.add("card-1");
+    cards[1].classList.add("card-2");
+    cards[4].classList.add("card-2");
+    cards[2].classList.add("card-3");
+    cards[5].classList.add("card-3");
 }

@@ -68,10 +68,6 @@ button a {
     box-shadow: 0 0 6px 3px var(--primary-font-color);
 }
 
-.card-blank {
-    background: url("../images/card-back.webp") no-repeat 0px 0px / cover;
-}
-
 .card-1 {
     background: url("../images/billiard-ball-ai-generated.webp") no-repeat 0px 0px / cover;
 }
@@ -112,6 +108,9 @@ button a {
     background: url("../images/view-golf-sport-equipment.webp") no-repeat 0px 0px / cover;
 }
 
+.card-blank {
+    background: url("../images/card-back.webp") no-repeat 0px 0px / cover;
+}
 
 /* Media Queries*/
 
