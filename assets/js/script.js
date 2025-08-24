@@ -10,15 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * Assign blank card class to cover content of cards.
      * This creates the illusion that the cards have a front and back side.
-     * Cards need to be turned around in the physical game.
+     * Add event listener to each card when clicked
      */
-    for (i of cards) {
-        i.classList.add("card-blank");
+    for (card of cards) {
+        card.classList.add("card-blank");
+        card.addEventListener("click", game);
     }
 
-    // Add event listener to each card when clicked
-    for (i of cards) {
-        i.addEventListener("click", game);
-    }
 
 })
