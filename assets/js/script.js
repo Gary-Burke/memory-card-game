@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (card of cards) {
         faceDown(card);
-        // card.addEventListener("click", game);
+        card.addEventListener("click", game);
     }
 })
 
@@ -20,4 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function faceDown(card) {
     card.classList.add("card-blank");
+}
+
+/** 
+ * Turn selected card around and reveal its content by toggling the blank class assigned to this card on/off.
+ */
+function game(e) {
+    let card = e.target;
+    card.classList.toggle("card-blank");
 }
