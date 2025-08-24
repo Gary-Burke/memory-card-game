@@ -37,9 +37,23 @@ function game(e) {
  */
 function cardContent(cards) {
     cards[0].classList.add("card-1");
-    cards[3].classList.add("card-1");
-    cards[1].classList.add("card-2");
-    cards[4].classList.add("card-2");
-    cards[2].classList.add("card-3");
+    cards[1].classList.add("card-1");
+    cards[2].classList.add("card-2");
+    cards[3].classList.add("card-2");
+    cards[4].classList.add("card-3");
     cards[5].classList.add("card-3");
+    cards[6].classList.add("card-4");
+    cards[7].classList.add("card-4");
+    cards[8].classList.add("card-5");
+    cards[9].classList.add("card-5");
+    cards[10].classList.add("card-6");
+    cards[11].classList.add("card-6");
+    cards[12].classList.add("card-7");
+    cards[13].classList.add("card-7");
+    cards[14].classList.add("card-8");
+    cards[15].classList.add("card-8");
+    cards[16].classList.add("card-9");
+    cards[17].classList.add("card-9");
+    cards[18].classList.add("card-9");
+    cards[19].classList.add("card-9");
 }
