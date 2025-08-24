@@ -33,9 +33,20 @@ function game(e) {
 
 
 /**
- * Assign images by classes to cards in matching pairs
+ * Assign images via classes to cards in matching pairs
  */
 function cardContent(cards) {
+
+// Generate 20 unique numbers between 1 - 20
+// I found this solution on https://stackoverflow.com/a/2380113/30846754
+    let numbers = [];
+    while (numbers.length < 20) {
+        var i = Math.floor(Math.random() * 20) + 1;
+        if (numbers.indexOf(i) === -1) {
+            numbers.push(i);
+        }
+    }
+
     cards[0].classList.add("card-1");
     cards[1].classList.add("card-1");
     cards[2].classList.add("card-2");
