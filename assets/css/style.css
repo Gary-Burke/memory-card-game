@@ -72,6 +72,47 @@ button a {
     background: url("../images/card-back.webp") no-repeat 0px 0px / cover;
 }
 
+.card-1 {
+    background: url("../images/billiard-ball-ai-generated.webp") no-repeat 0px 0px / cover;
+}
+
+.card-2 {
+    background: url("../images/closeup-baseball.webp") no-repeat 0px 0px / cover;
+}
+
+.card-3 {
+    background: url("../images/cricket-ball-isolated.webp") no-repeat 0px 0px / cover;
+}
+
+.card-4 {
+    background: url("../images/details-ball-sport.webp") no-repeat 0px 0px / cover;
+}
+
+.card-5 {
+    background: url("../images/high-angle-basketball.webp") no-repeat 0px 0px / cover;
+}
+
+.card-6 {
+    background: url("../images/rugby-ball-grass.webp") no-repeat 0px 0px / cover;
+}
+
+.card-7 {
+    background: url("../images/soccer-ball-turf-grass.webp") no-repeat 0px 0px / cover;
+}
+
+.card-8 {
+    background: url("../images/sport-ball-outdoors.webp") no-repeat 0px 0px / cover;
+}
+
+.card-9 {
+    background: url("../images/top-view-one-tennis-ball.webp") no-repeat 0px 0px / cover;
+}
+
+.card-10 {
+    background: url("../images/view-golf-sport-equipment.webp") no-repeat 0px 0px / cover;
+}
+
+
 /* Media Queries*/
 
 /* Large screen sizes - 576px up*/
