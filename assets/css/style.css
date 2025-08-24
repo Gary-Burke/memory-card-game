@@ -68,15 +68,11 @@ button a {
     box-shadow: 0 0 6px 3px var(--primary-font-color);
 }
 
-/* #board {
-    border: white solid 1px;
-} */
-
 /* Media Queries*/
 
 /* Large screen sizes - 576px up*/
-@media screen and (min-width: 576px) {
 
+@media screen and (min-width: 576px) {
     /* Ensure cards don't get too big on bigger screens */
     #board {
         width: 70vw;
@@ -88,7 +84,6 @@ button a {
     body {
         background: #35302C url("../images/background.webp") repeat 0px 0px / cover;
     }
-
     /* Ensure cards don't get too big on bigger screens */
     #board {
         width: 80vw;
@@ -97,7 +92,6 @@ button a {
 
 /* Large screen sizes - 992px up*/
 @media screen and (min-width: 992px) {
-
     /* Ensure cards don't get too big on bigger screens */
     #board {
         width: 50vw;
