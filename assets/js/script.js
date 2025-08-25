@@ -50,12 +50,12 @@ function game(e) {
         for (let pair of pairs) {
             pair.classList.add("hidden");
         }
-        selection1 = "";
-        selection2 = "";
-        pair1 = "";
-        pair2 = "";
-
+        reset();
     }
+    /*else if (selection1 && selection2) {
+           
+           reset();
+       }*/
 
     console.log("selection1: ", selection1);
     console.log("selection2: ", selection2);
@@ -145,4 +145,11 @@ function cardContent(cards) {
     cards[numbers[19]].setAttribute("data-selection", "20");
 
     console.log("numbers: ", numbers);
+}
+
+function reset() {
+    selection1 = "";
+    selection2 = "";
+    pair1 = "";
+    pair2 = "";
 }
