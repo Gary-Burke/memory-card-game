@@ -6,11 +6,12 @@ let bestScore = 0;
 document.addEventListener("DOMContentLoaded", function () {
 
     // Get the card elements and assign them to array "cards"
-    // Add event listener to each card when clicked
+    // Call cardContent function
     let cards = document.getElementsByClassName("card");
     cardContent(cards);
 
-    for (let card of cards) {   
+    // Add event listener to each card when clicked
+    for (let card of cards) {
         faceDown(card);
         card.addEventListener("click", game);
     }
@@ -38,7 +39,7 @@ function game(e) {
  */
 function cardContent(cards) {
 
-// Generate 20 unique numbers between 1 - 20
+    // Generate 20 unique numbers between 1 - 20
     let numbers = [];
     while (numbers.length < 20) {
         var i = Math.floor(Math.random() * 20) + 1;
