@@ -112,6 +112,10 @@ button a {
     background: url("../images/card-back.webp") no-repeat 0px 0px / cover;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Media Queries*/
 
 /* Large screen sizes - 576px up*/

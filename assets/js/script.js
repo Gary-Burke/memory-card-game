@@ -44,10 +44,13 @@ function game(e) {
         pair2 = card.getAttribute("data-pair"); // identify which card was selected 1st
     }
 
-    // if (selection1 !== selection2) {
-    //     selection1 = "";
-    //     selection2 = "";
-    // }
+    if ((pair1 === pair2) && (selection1 !== selection2)) {
+
+        let pairs = document.querySelectorAll(`[data-pair='${pair1}']`);
+        for (let pair of pairs) {
+            pair.classList.add("hidden");
+        }
+    }
 
     console.log("selection1: ", selection1);
     console.log("selection2: ", selection2);
