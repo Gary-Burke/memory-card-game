@@ -50,6 +50,12 @@ function game(e) {
         for (let pair of pairs) {
             pair.classList.add("hidden");
         }
+
+        selection1 = "";
+        selection2 = "";
+        pair1 = "";
+        pair2 = "";
+
     }
 
     console.log("selection1: ", selection1);
