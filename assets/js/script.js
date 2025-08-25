@@ -3,6 +3,8 @@ let currentScore = 0;
 let bestScore = 0;
 let selection1 = "";
 let selection2 = "";
+let pair1 = "";
+let pair2 = "";
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,6 +35,24 @@ function faceDown(card) {
 function game(e) {
     let card = e.target;
     card.classList.toggle("card-blank");
+
+    if (!selection1) {
+        selection1 = card.getAttribute("data-selection"); // identify which card was selected 1st
+        pair1 = card.getAttribute("data-pair"); // identify which card was selected 1st
+    } else {
+        selection2 = card.getAttribute("data-selection"); // identify which card was selected 2nd
+        pair2 = card.getAttribute("data-pair"); // identify which card was selected 1st
+    }
+
+    // if (selection1 !== selection2) {
+    //     selection1 = "";
+    //     selection2 = "";
+    // }
+
+    console.log("selection1: ", selection1);
+    console.log("selection2: ", selection2);
+    console.log("pair1: ", pair1);
+    console.log("pair2: ", pair2);
 }
 
 
@@ -74,6 +94,27 @@ function cardContent(cards) {
     cards[numbers[18]].classList.add("card-10");
     cards[numbers[19]].classList.add("card-10");
 
+    cards[numbers[0]].setAttribute("data-pair", "1");
+    cards[numbers[1]].setAttribute("data-pair", "1");
+    cards[numbers[2]].setAttribute("data-pair", "2");
+    cards[numbers[3]].setAttribute("data-pair", "2");
+    cards[numbers[4]].setAttribute("data-pair", "3");
+    cards[numbers[5]].setAttribute("data-pair", "3");
+    cards[numbers[6]].setAttribute("data-pair", "4");
+    cards[numbers[7]].setAttribute("data-pair", "4");
+    cards[numbers[8]].setAttribute("data-pair", "5");
+    cards[numbers[9]].setAttribute("data-pair", "5");
+    cards[numbers[10]].setAttribute("data-pair", "6");
+    cards[numbers[11]].setAttribute("data-pair", "6");
+    cards[numbers[12]].setAttribute("data-pair", "7");
+    cards[numbers[13]].setAttribute("data-pair", "7");
+    cards[numbers[14]].setAttribute("data-pair", "8");
+    cards[numbers[15]].setAttribute("data-pair", "8");
+    cards[numbers[16]].setAttribute("data-pair", "9");
+    cards[numbers[17]].setAttribute("data-pair", "9");
+    cards[numbers[18]].setAttribute("data-pair", "10");
+    cards[numbers[19]].setAttribute("data-pair", "10");
+
     cards[numbers[0]].setAttribute("data-selection", "1");
     cards[numbers[1]].setAttribute("data-selection", "2");
     cards[numbers[2]].setAttribute("data-selection", "3");
@@ -95,5 +136,5 @@ function cardContent(cards) {
     cards[numbers[18]].setAttribute("data-selection", "19");
     cards[numbers[19]].setAttribute("data-selection", "20");
 
-    console.log(numbers);
+    console.log("numbers: ", numbers);
 }
