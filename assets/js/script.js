@@ -45,17 +45,30 @@ function game(e) {
         pair2 = card.getAttribute("data-pair"); // identify which pair card belongs to
     }
 
-    if ((pair1 === pair2) && (selection1 !== selection2)) {
+    if ((pair1 === pair2) && (selection1 !== selection2)) { // if pairs match then apply class hidden
         let pairs = document.querySelectorAll(`[data-pair='${pair1}']`);
         for (let pair of pairs) {
             pair.classList.add("hidden");
         }
         reset();
+    } else if (selection2 && (pair1 !== pair2)) { // If two selection have been made but don't match, reset cards and selection
+        console.log("selection1: ", selection1);
+        console.log("selection2: ", selection2);
+        console.log("pair1: ", pair1);
+        console.log("pair2: ", pair2);
+
+        /* I was looking for a solution to delay the cards from turning around instantly when a pair doesn't match.
+        After some research, I came across this solution from satckoverflow:
+        https://stackoverflow.com/a/1183886/30846754
+        */
+        setTimeout(function () {
+            document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
+            document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
+            reset();
+        }, 800);
+
     }
-    /*else if (selection1 && selection2) {
-           
-           reset();
-       }*/
+
 
     console.log("selection1: ", selection1);
     console.log("selection2: ", selection2);
