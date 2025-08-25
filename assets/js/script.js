@@ -4,12 +4,13 @@ let bestScore = 0;
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
+
     // Get the card elements and assign them to array "cards"
     // Add event listener to each card when clicked
     let cards = document.getElementsByClassName("card");
+    cardContent(cards);
 
-    for (card of cards) {
-        cardContent(cards);
+    for (let card of cards) {   
         faceDown(card);
         card.addEventListener("click", game);
     }
@@ -46,7 +47,7 @@ function cardContent(cards) {
         }
     }
 
-    cards[0].classList.add("card-1");
+    cards[numbers[0]].classList.add("card-1");
     cards[1].classList.add("card-1");
     cards[2].classList.add("card-2");
     cards[3].classList.add("card-2");
