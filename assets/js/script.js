@@ -1,6 +1,8 @@
 // Global Variables
 let currentScore = 0;
 let bestScore = 0;
+let selection1 = "";
+let selection2 = "";
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
@@ -40,7 +42,8 @@ function game(e) {
  */
 function cardContent(cards) {
 
-    // Generate 20 unique numbers between 1 - 20 for the 20 cards
+    // Generate 20 unique numbers between 0 - 19 for the 20 cards
+    // Important to start at 0 to correspond with the array indexing
     let numbers = [];
 
     while (numbers.length < 20) {
@@ -70,4 +73,27 @@ function cardContent(cards) {
     cards[numbers[17]].classList.add("card-9");
     cards[numbers[18]].classList.add("card-10");
     cards[numbers[19]].classList.add("card-10");
+
+    cards[numbers[0]].setAttribute("data-selection", "1");
+    cards[numbers[1]].setAttribute("data-selection", "2");
+    cards[numbers[2]].setAttribute("data-selection", "3");
+    cards[numbers[3]].setAttribute("data-selection", "4");
+    cards[numbers[4]].setAttribute("data-selection", "5");
+    cards[numbers[5]].setAttribute("data-selection", "6");
+    cards[numbers[6]].setAttribute("data-selection", "7");
+    cards[numbers[7]].setAttribute("data-selection", "8");
+    cards[numbers[8]].setAttribute("data-selection", "9");
+    cards[numbers[9]].setAttribute("data-selection", "10");
+    cards[numbers[10]].setAttribute("data-selection", "11");
+    cards[numbers[11]].setAttribute("data-selection", "12");
+    cards[numbers[12]].setAttribute("data-selection", "13");
+    cards[numbers[13]].setAttribute("data-selection", "14");
+    cards[numbers[14]].setAttribute("data-selection", "15");
+    cards[numbers[15]].setAttribute("data-selection", "16");
+    cards[numbers[16]].setAttribute("data-selection", "17");
+    cards[numbers[17]].setAttribute("data-selection", "18");
+    cards[numbers[18]].setAttribute("data-selection", "19");
+    cards[numbers[19]].setAttribute("data-selection", "20");
+
+    console.log(numbers);
 }
