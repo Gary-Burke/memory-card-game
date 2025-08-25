@@ -29,9 +29,9 @@ function faceDown(card) {
 }
 
 /** 
- * Turn selected card around and reveal its content by toggling the blank class assigned to this card on/off.
- * Update global var for selection and pair base on card click event listener.
- * If pairs match then add class hidden to them and reset global var selection and pair.
+ * Event listener click toggles card-blank class off.
+ * Logs two selections of cards. If they match, then apply class hidden to both.
+ * If they don't match, then toggle card-blank class back on for both and reset selections.
  */
 function game(e) {
     let card = e.target;
@@ -51,14 +51,10 @@ function game(e) {
             pair.classList.add("hidden");
         }
         reset();
-    } else if (selection2 && (pair1 !== pair2)) { // If two selection have been made but don't match, reset cards and selection
-        console.log("selection1: ", selection1);
-        console.log("selection2: ", selection2);
-        console.log("pair1: ", pair1);
-        console.log("pair2: ", pair2);
+    } else if (selection2 && (pair1 !== pair2)) { // If two selection have been made but don't match, reset cards and selection        
 
         /* I was looking for a solution to delay the cards from turning around instantly when a pair doesn't match.
-        After some research, I came across this solution from satckoverflow:
+        After some research, I came across this solution from stackoverflow:
         https://stackoverflow.com/a/1183886/30846754
         */
         setTimeout(function () {
@@ -66,14 +62,14 @@ function game(e) {
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
             reset();
         }, 800);
-
     }
 
-
+    // Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+    /* 
     console.log("selection1: ", selection1);
     console.log("selection2: ", selection2);
     console.log("pair1: ", pair1);
-    console.log("pair2: ", pair2);
+    console.log("pair2: ", pair2); */
 }
 
 
@@ -157,7 +153,7 @@ function cardContent(cards) {
     cards[numbers[18]].setAttribute("data-selection", "19");
     cards[numbers[19]].setAttribute("data-selection", "20");
 
-    console.log("numbers: ", numbers);
+    console.log("numbers: ", numbers); // Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
 
 function reset() {
