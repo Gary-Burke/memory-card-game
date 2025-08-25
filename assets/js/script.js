@@ -36,36 +36,38 @@ function game(e) {
 
 /**
  * Assign images via classes to cards in matching pairs
+ * Generate 20 unique numbers to randomize to class assignment, thus randomizing the card positions in the game
  */
 function cardContent(cards) {
 
-    // Generate 20 unique numbers between 1 - 20
+    // Generate 20 unique numbers between 1 - 20 for the 20 cards
     let numbers = [];
+
     while (numbers.length < 20) {
-        var i = Math.floor(Math.random() * 20) + 1;
+        var i = Math.floor(Math.random() * 20);
         if (!numbers.includes(i)) {
             numbers.push(i);
         }
     }
 
     cards[numbers[0]].classList.add("card-1");
-    cards[1].classList.add("card-1");
-    cards[2].classList.add("card-2");
-    cards[3].classList.add("card-2");
-    cards[4].classList.add("card-3");
-    cards[5].classList.add("card-3");
-    cards[6].classList.add("card-4");
-    cards[7].classList.add("card-4");
-    cards[8].classList.add("card-5");
-    cards[9].classList.add("card-5");
-    cards[10].classList.add("card-6");
-    cards[11].classList.add("card-6");
-    cards[12].classList.add("card-7");
-    cards[13].classList.add("card-7");
-    cards[14].classList.add("card-8");
-    cards[15].classList.add("card-8");
-    cards[16].classList.add("card-9");
-    cards[17].classList.add("card-9");
-    cards[18].classList.add("card-10");
-    cards[19].classList.add("card-10");
+    cards[numbers[1]].classList.add("card-1");
+    cards[numbers[2]].classList.add("card-2");
+    cards[numbers[3]].classList.add("card-2");
+    cards[numbers[4]].classList.add("card-3");
+    cards[numbers[5]].classList.add("card-3");
+    cards[numbers[6]].classList.add("card-4");
+    cards[numbers[7]].classList.add("card-4");
+    cards[numbers[8]].classList.add("card-5");
+    cards[numbers[9]].classList.add("card-5");
+    cards[numbers[10]].classList.add("card-6");
+    cards[numbers[11]].classList.add("card-6");
+    cards[numbers[12]].classList.add("card-7");
+    cards[numbers[13]].classList.add("card-7");
+    cards[numbers[14]].classList.add("card-8");
+    cards[numbers[15]].classList.add("card-8");
+    cards[numbers[16]].classList.add("card-9");
+    cards[numbers[17]].classList.add("card-9");
+    cards[numbers[18]].classList.add("card-10");
+    cards[numbers[19]].classList.add("card-10");
 }
