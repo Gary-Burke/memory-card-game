@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * Assign blank card class to every card in order to cover content of cards.
- * This creates the illusion that the cards have a front and back side.
  */
 function faceDown(card) {
     card.classList.add("card-blank");
@@ -31,6 +30,8 @@ function faceDown(card) {
 
 /** 
  * Turn selected card around and reveal its content by toggling the blank class assigned to this card on/off.
+ * Update global var for selection and pair base on card click event listener.
+ * If pairs match then add class hidden to them and reset global var selection and pair.
  */
 function game(e) {
     let card = e.target;
@@ -38,19 +39,17 @@ function game(e) {
 
     if (!selection1) {
         selection1 = card.getAttribute("data-selection"); // identify which card was selected 1st
-        pair1 = card.getAttribute("data-pair"); // identify which card was selected 1st
+        pair1 = card.getAttribute("data-pair"); // identify which pair card belongs to
     } else {
         selection2 = card.getAttribute("data-selection"); // identify which card was selected 2nd
-        pair2 = card.getAttribute("data-pair"); // identify which card was selected 1st
+        pair2 = card.getAttribute("data-pair"); // identify which pair card belongs to
     }
 
     if ((pair1 === pair2) && (selection1 !== selection2)) {
-
         let pairs = document.querySelectorAll(`[data-pair='${pair1}']`);
         for (let pair of pairs) {
             pair.classList.add("hidden");
         }
-
         selection1 = "";
         selection2 = "";
         pair1 = "";
