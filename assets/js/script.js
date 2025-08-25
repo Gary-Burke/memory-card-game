@@ -38,11 +38,10 @@ function game(e) {
 function cardContent(cards) {
 
 // Generate 20 unique numbers between 1 - 20
-// I found this solution on https://stackoverflow.com/a/2380113/30846754
     let numbers = [];
     while (numbers.length < 20) {
         var i = Math.floor(Math.random() * 20) + 1;
-        if (numbers.indexOf(i) === -1) {
+        if (!numbers.includes(i)) {
             numbers.push(i);
         }
     }
@@ -65,6 +64,6 @@ function cardContent(cards) {
     cards[15].classList.add("card-8");
     cards[16].classList.add("card-9");
     cards[17].classList.add("card-9");
-    cards[18].classList.add("card-9");
-    cards[19].classList.add("card-9");
+    cards[18].classList.add("card-10");
+    cards[19].classList.add("card-10");
 }
