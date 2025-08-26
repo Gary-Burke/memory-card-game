@@ -56,6 +56,14 @@ button a {
 
 /* Game Page */
 
+#board i {
+    color: var(--primary-font-color);
+}
+
+#board i:hover {
+     text-shadow: 0 0 16px var(--primary-font-color);
+}
+
 .card {
     /* Ensure height is always equal to width */
     aspect-ratio: 1 / 1;
