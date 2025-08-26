@@ -16,7 +16,8 @@ body {
     color: var(--primary-font-color);
 }
 
-h1 {
+h1,
+h2 {
     letter-spacing: 0.2rem;
     font-family: var(--primary-font);
 }
@@ -122,6 +123,17 @@ button a {
 
 .hidden {
     visibility: hidden;
+}
+
+/* Game Over Message Box*/
+#game-over {
+    border: var(--primary-font-color) ridge 5px;
+    background-color: var(--primary-bg-color);
+    box-shadow: 4px 4px 5px 3px rgb(6, 6, 6);
+}
+
+.visibility {
+    display: none;
 }
 
 /* Media Queries*/
