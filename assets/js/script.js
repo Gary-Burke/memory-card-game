@@ -1,7 +1,7 @@
 // Global Variables
 let currentScore = 0;
 let bestScore = 0;
-let selection1 = "";
+let selection1 = ""; 
 let selection2 = "";
 let pair1 = "";
 let pair2 = "";
@@ -27,10 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function (e) {
             if (this.getAttribute("data-button") === "game-over-new-game") {
                 gameOverBox();
+                gameOverReset();
                 reset();
                 cardReset(cards);
                 cardContent(cards);
-                
+                for (let card of cards) {
+                    faceDown(card);
+                }
             }
         })
     }
@@ -85,7 +88,6 @@ function game(e) {
             document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
             reset();
-
         }, 800);
     }
 }
@@ -184,7 +186,7 @@ function reset() {
 }
 
 /**
- * Toggles Game Over Box on/off
+ * Toggles Game Over Box on/off and resets gameOver counter
  */
 function gameOverBox() {
     document.getElementById("game-over").classList.toggle("visibility");
@@ -197,4 +199,11 @@ function cardReset(cards) {
     for (let card of cards) {
         card.className = "card";
     }
+}
+
+/**
+ * Reset gameOver counter
+ */
+function gameOverReset() {
+    gameOver = 0;
 }
