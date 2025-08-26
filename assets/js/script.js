@@ -59,7 +59,7 @@ function game(e) {
             }
 
             if (gameOver === 10) { // 20 tiles equals 10 pairs which triggers game over
-                document.getElementById("game-over").classList.toggle("visibility");
+                gameOverBox();
             }
             reset();
         }, 800);
@@ -170,4 +170,8 @@ function reset() {
     selection2 = "";
     pair1 = "";
     pair2 = "";
+}
+
+function gameOverBox() {
+    document.getElementById("game-over").classList.toggle("visibility");
 }
