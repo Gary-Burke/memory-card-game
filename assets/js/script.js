@@ -21,7 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
         faceDown(card);
         card.addEventListener("click", game);
     }
+
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+        button.addEventListener("click", function (e) {
+            if (this.getAttribute("data-button") === "game-over-new-game") {
+                gameOverBox();
+                reset();
+                cardReset(cards);
+                cardContent(cards);
+                
+            }
+        })
+    }
 })
+
+
 
 /**
  * Assign blank card class to every card in order to cover content of cards.
@@ -72,7 +87,7 @@ function game(e) {
             reset();
 
         }, 800);
-    }   
+    }
 }
 
 /**
@@ -155,7 +170,7 @@ function cardContent(cards) {
     cards[numbers[18]].setAttribute("data-selection", "19");
     cards[numbers[19]].setAttribute("data-selection", "20");
 
-    console.log("numbers: ", numbers);               // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+    console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
 
 /**
@@ -173,4 +188,13 @@ function reset() {
  */
 function gameOverBox() {
     document.getElementById("game-over").classList.toggle("visibility");
+}
+
+/** 
+ * Removes all classes from cards and set each to .card only
+ */
+function cardReset(cards) {
+    for (let card of cards) {
+        card.className = "card";
+    }
 }
