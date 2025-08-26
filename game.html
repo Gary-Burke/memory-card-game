@@ -22,15 +22,27 @@
     <link rel="stylesheet" href="assets\css\style.css">
 </head>
 
-<body class="container text-center min-vh-100">
-    <div class="row justify-content-center">
-        <h1 class="col-12 my-2">MEMORY</h1>
-        <p id="current-score" class="col-6 col-md-3">Current Turns: -</p>
-        <p id="best-score" class="col-6 col-md-3">Best Score: -</p>
+<body id="board" class="container text-center min-vh-100">
+
+    <!-- Header -->
+    <header>
+        <div class="d-flex align-items-center mt-4">
+            <h1 class="ms-auto ">MEMORY</h1>
+            <ul class="h1 me-auto">
+                <i class="fa-solid fa-rotate-right me-2"></i>
+                <i class="fa-solid fa-house"></i>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Scores -->
+    <div class="row justify-content-evenly my-2">
+        <p id="current-score" class="col-6 col-md-4">Current Turns: -</p>
+        <p id="best-score" class="col-6 col-md-4">Best Score: -</p>
     </div>
 
     <!-- Board with cards -->
-    <div id="board" class="container text-center">
+    <div class="container text-center">
         <div class="row row-cols-4 row-cols-md-5 g-2 g-md-3 g-lg-4">
             <div class="col">
                 <div class="card"></div>
@@ -110,6 +122,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
     </script>
+
+    <!-- Font Awesome Kit     -->
+    <script src="https://kit.fontawesome.com/3a3a47fde5.js" crossorigin="anonymous"></script>
 
     <!-- JS link -->
     <script src="assets\js\script.js"></script>

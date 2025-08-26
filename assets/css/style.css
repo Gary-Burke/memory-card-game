@@ -55,6 +55,7 @@ button a {
 }
 
 /* Game Page */
+
 .card {
     /* Ensure height is always equal to width */
     aspect-ratio: 1 / 1;
