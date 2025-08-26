@@ -32,7 +32,7 @@ button {
 }
 
 button:hover {
-    box-shadow: inset 0 0 16px 10px var(--black-color) ,
+    box-shadow: inset 0 0 16px 10px var(--black-color),
         0 0 6px 3px var(--primary-font-color);
 }
 
@@ -53,25 +53,24 @@ button a {
     background-color: var(--primary-bg-color);
     border: var(--primary-font-color) ridge 2px;
     font-family: var(--primary-font);
-    box-shadow: inset 0 0 8px 3px var(--black-color) ;
+    box-shadow: inset 0 0 8px 3px var(--black-color);
 }
 
 /* Game Page */
-
 #board i {
     color: var(--primary-font-color);
 }
 
 #board i:hover {
-     text-shadow: 0 0 16px var(--primary-font-color);
+    text-shadow: 0 0 16px var(--primary-font-color);
 }
 
 .card {
     /* Ensure height is always equal to width */
     aspect-ratio: 1 / 1;
-    border: var(--black-color)  1px solid; 
+    border: var(--black-color) 1px solid;
     border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px 2px var(--black-color) ;
+    box-shadow: 2px 2px 2px 2px var(--black-color);
 }
 
 .card:hover {
@@ -130,7 +129,7 @@ button a {
 #game-over {
     border: var(--primary-font-color) ridge 5px;
     background-color: var(--primary-bg-color);
-    box-shadow: 4px 4px 5px 3px var(--black-color) ;
+    box-shadow: 4px 4px 5px 3px var(--black-color);
 }
 
 .visibility {
@@ -142,6 +141,7 @@ button a {
 /* Large screen sizes - 576px up*/
 
 @media screen and (min-width: 576px) {
+
     /* Ensure cards don't get too big on bigger screens */
     #board {
         width: 70vw;
@@ -153,14 +153,21 @@ button a {
     body {
         background: #35302C url("../images/background.webp") repeat 0px 0px / cover;
     }
+
     /* Ensure cards don't get too big on bigger screens */
     #board {
         width: 80vw;
+    }
+
+    #current-score,
+    #best-score {
+        font-size: 1.2rem;
     }
 }
 
 /* Large screen sizes - 992px up*/
 @media screen and (min-width: 992px) {
+
     /* Ensure cards don't get too big on bigger screens */
     #board {
         width: 50vw;
