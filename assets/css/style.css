@@ -125,7 +125,7 @@ button a {
     visibility: hidden;
 }
 
-/* Game Over Message Box*/
+/* Game Over Message Box  */
 #game-over {
     border: var(--primary-font-color) ridge 5px;
     background-color: var(--primary-bg-color);

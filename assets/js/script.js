@@ -5,6 +5,7 @@ let selection1 = "";
 let selection2 = "";
 let pair1 = "";
 let pair2 = "";
+let gameOver = 0;
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,10 +51,15 @@ function game(e) {
     https://stackoverflow.com/a/1183886/30846754
     */
     if ((pair1 === pair2) && (selection1 !== selection2)) { // if pairs match then apply class hidden
+        ++gameOver;
         setTimeout(function () {
             let pairs = document.querySelectorAll(`[data-pair='${pair1}']`);
             for (let pair of pairs) {
                 pair.classList.add("hidden");
+            }
+
+            if (gameOver === 10) { // 20 tiles equals 10 pairs which triggers game over
+                document.getElementById("game-over").classList.toggle("visibility");
             }
             reset();
         }, 800);
@@ -63,6 +69,7 @@ function game(e) {
             document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
             reset();
+
         }, 800);
     }
 
