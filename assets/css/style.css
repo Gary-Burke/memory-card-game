@@ -62,7 +62,6 @@ button a {
     border: black 1px solid;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 2px 2px rgb(6, 6, 6);
-    transition: 0.4s;
 }
 
 .card:hover {
