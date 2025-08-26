@@ -1,11 +1,11 @@
 // Global Variables
 let currentScore = 0;
 let bestScore = 0;
-let selection1 = ""; 
-let selection2 = "";
-let pair1 = "";
-let pair2 = "";
-let gameOver = 0;
+let selection1 = ""; // identify which card was selected 1st
+let selection2 = ""; // identify which card was selected 2nd
+let pair1 = ""; // identify which pair card belongs to
+let pair2 = ""; // identify which pair card belongs to
+let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
@@ -58,11 +58,11 @@ function game(e) {
     card.classList.toggle("card-blank");
 
     if (!selection1) {
-        selection1 = card.getAttribute("data-selection"); // identify which card was selected 1st
-        pair1 = card.getAttribute("data-pair"); // identify which pair card belongs to
+        selection1 = card.getAttribute("data-selection");
+        pair1 = card.getAttribute("data-pair");
     } else {
-        selection2 = card.getAttribute("data-selection"); // identify which card was selected 2nd
-        pair2 = card.getAttribute("data-pair"); // identify which pair card belongs to
+        selection2 = card.getAttribute("data-selection");
+        pair2 = card.getAttribute("data-pair");
     }
 
     /* 
