@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cardContent(cards);
 
     // Add event listener to each card when clicked
+    // Call function faceDown to each one
     for (let card of cards) {
         faceDown(card);
         card.addEventListener("click", game);
@@ -46,7 +47,7 @@ function game(e) {
         pair2 = card.getAttribute("data-pair"); // identify which pair card belongs to
     }
 
-    /* I was looking for a solution to delay the cards from turning around instantly when a pair matches. 
+    /* 
     After some research, I came across this solution from stackoverflow regarding the setTimeout function: 
     https://stackoverflow.com/a/1183886/30846754
     */
@@ -71,16 +72,8 @@ function game(e) {
             reset();
 
         }, 800);
-    }
-
-    // Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
-    /* 
-    console.log("selection1: ", selection1);
-    console.log("selection2: ", selection2);
-    console.log("pair1: ", pair1);
-    console.log("pair2: ", pair2); */
+    }   
 }
-
 
 /**
  * Assign images via classes to cards in matching pairs
@@ -162,9 +155,12 @@ function cardContent(cards) {
     cards[numbers[18]].setAttribute("data-selection", "19");
     cards[numbers[19]].setAttribute("data-selection", "20");
 
-    console.log("numbers: ", numbers); // Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+    console.log("numbers: ", numbers);               // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
 
+/**
+ * Reset both selections and pairs
+ */
 function reset() {
     selection1 = "";
     selection2 = "";
@@ -172,6 +168,9 @@ function reset() {
     pair2 = "";
 }
 
+/**
+ * Toggles Game Over Box on/off
+ */
 function gameOverBox() {
     document.getElementById("game-over").classList.toggle("visibility");
 }
