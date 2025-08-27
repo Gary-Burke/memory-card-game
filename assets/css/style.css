@@ -47,6 +47,7 @@ button a {
     background-color: var(--primary-bg-color);
     color: var(--primary-font-color);
     border: var(--primary-font-color) 4px ridge;
+    border-radius: 1rem;
 }
 
 .modal-content button {
@@ -130,6 +131,7 @@ button a {
     border: var(--primary-font-color) ridge 5px;
     background-color: var(--primary-bg-color);
     box-shadow: 4px 4px 5px 3px var(--black-color);
+    border-radius: 1rem;
 }
 
 .visibility {
