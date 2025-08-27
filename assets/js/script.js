@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 cardReset(cards);
                 cardContent(cards);
                 faceDown(cards);
-                currentScore = 0;    
-                currentScoreCal();            
+                currentScore = 0;
+                currentScoreCal();
             }
         })
     }
@@ -80,7 +80,7 @@ function game(e) {
             }
 
             if (gameOver === 10) { // 20 tiles equals 10 pairs which triggers game over
-                gameOverBox();                
+                gameOverBox();
             }
             reset();
         }, 800);
@@ -224,8 +224,10 @@ function currentScoreCal() {
  */
 function bestScoreCal() {
     if ((currentScore < bestScore) || (bestScore === 0)) {
-        bestScore = currentScore;        
+        bestScore = currentScore;
         document.querySelector("#best-score span").innerText = bestScore;
         document.querySelector("#game-over p").innerText = "You have set a NEW Best Score!";
+    } else {
+        document.querySelector("#game-over p").innerText = "You have finished the game.";
     }
 }
