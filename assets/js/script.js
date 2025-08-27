@@ -224,7 +224,8 @@ function currentScoreCal() {
  */
 function bestScoreCal() {
     if ((currentScore < bestScore) || (bestScore === 0)) {
-        bestScore = currentScore;
+        bestScore = currentScore;        
         document.querySelector("#best-score span").innerText = bestScore;
+        document.querySelector("#game-over p").innerText = "You have set a NEW Best Score!";
     }
 }
