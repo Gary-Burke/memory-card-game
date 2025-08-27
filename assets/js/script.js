@@ -10,16 +10,19 @@ let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Get the card elements and assign them to array "cards"
+    // Get the card elements and assign them to html collection "cards"
     let cards = document.getElementsByClassName("card");
     cardContent(cards);
     faceDown(cards);
+    currentScoreCal();
+    bestScoreCal();
 
     // Add event listener to each card when clicked to execute game action
     for (let card of cards) {
         card.addEventListener("click", game);
     }
 
+    // Start a new game when the current one has been completed
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function (e) {
@@ -30,12 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 cardReset(cards);
                 cardContent(cards);
                 faceDown(cards);
+                currentScore = 0;    
+                currentScoreCal();            
             }
         })
     }
 })
-
-
 
 /**
  * Assign blank card class to every card in order to cover content of cards.
@@ -61,6 +64,7 @@ function game(e) {
     } else {
         selection2 = card.getAttribute("data-selection");
         pair2 = card.getAttribute("data-pair");
+        ++currentScore;
     }
 
     /* 
@@ -76,7 +80,7 @@ function game(e) {
             }
 
             if (gameOver === 10) { // 20 tiles equals 10 pairs which triggers game over
-                gameOverBox();
+                gameOverBox();                
             }
             reset();
         }, 800);
@@ -88,6 +92,7 @@ function game(e) {
             reset();
         }, 800);
     }
+    currentScoreCal();
 }
 
 /**
@@ -188,6 +193,7 @@ function reset() {
  */
 function gameOverBox() {
     document.getElementById("game-over").classList.toggle("visibility");
+    bestScoreCal();
 }
 
 /** 
@@ -204,4 +210,21 @@ function cardReset(cards) {
  */
 function gameOverReset() {
     gameOver = 0;
+}
+
+/** 
+ * Calculate current score 
+ */
+function currentScoreCal() {
+    document.querySelector("#current-score span").innerText = currentScore;
+}
+
+/** 
+ * Calculate best score 
+ */
+function bestScoreCal() {
+    if ((currentScore < bestScore) || (bestScore === 0)) {
+        bestScore = currentScore;
+        document.querySelector("#best-score span").innerText = bestScore;
+    }
 }
