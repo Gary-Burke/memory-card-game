@@ -11,14 +11,12 @@ let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 document.addEventListener("DOMContentLoaded", function () {
 
     // Get the card elements and assign them to array "cards"
-    // Call cardContent function
     let cards = document.getElementsByClassName("card");
     cardContent(cards);
+    faceDown(cards);
 
-    // Add event listener to each card when clicked
-    // Call function faceDown to each one
+    // Add event listener to each card when clicked to execute game action
     for (let card of cards) {
-        faceDown(card);
         card.addEventListener("click", game);
     }
 
@@ -31,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 reset();
                 cardReset(cards);
                 cardContent(cards);
-                for (let card of cards) {
-                    faceDown(card);
-                }
+                faceDown(cards);
             }
         })
     }
@@ -44,8 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * Assign blank card class to every card in order to cover content of cards.
  */
-function faceDown(card) {
-    card.classList.add("card-blank");
+function faceDown(cards) {
+    for (let card of cards) {
+        card.classList.add("card-blank");
+    }
 }
 
 /** 
