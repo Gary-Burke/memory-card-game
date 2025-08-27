@@ -38,6 +38,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
+    // Restart the game but cards still get randomized
+    let icons = document.getElementsByTagName("i");
+    for (let icon of icons) {
+        icon.addEventListener("click", function (e) {
+            if (this.getAttribute("data-icon") === "restartGame") {
+                gameOverReset();
+                reset();
+                cardReset(cards);
+                cardContent(cards);
+                faceDown(cards);
+                currentScore = 0;
+                currentScoreCal();
+            }
+        })
+    }
 })
 
 /**
