@@ -36,8 +36,8 @@ button:hover {
         0 0 6px 3px var(--primary-font-color);
 }
 
-/* Buttons with links */
-button a {
+/* Override Bootstrap css for links */
+a {
     text-decoration: none;
     color: var(--primary-font-color);
 }
@@ -58,11 +58,13 @@ button a {
 }
 
 /* Game Page */
+
 #board i {
     color: var(--primary-font-color);
 }
 
-#board i:hover {
+#board i:hover,
+#board a:hover {
     text-shadow: 0 0 16px var(--primary-font-color);
 }
 
