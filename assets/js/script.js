@@ -136,26 +136,11 @@ function cardContent(cards) {
         }
     }
 
-    cards[numbers[0]].classList.add("card-1");
-    cards[numbers[1]].classList.add("card-1");
-    cards[numbers[2]].classList.add("card-2");
-    cards[numbers[3]].classList.add("card-2");
-    cards[numbers[4]].classList.add("card-3");
-    cards[numbers[5]].classList.add("card-3");
-    cards[numbers[6]].classList.add("card-4");
-    cards[numbers[7]].classList.add("card-4");
-    cards[numbers[8]].classList.add("card-5");
-    cards[numbers[9]].classList.add("card-5");
-    cards[numbers[10]].classList.add("card-6");
-    cards[numbers[11]].classList.add("card-6");
-    cards[numbers[12]].classList.add("card-7");
-    cards[numbers[13]].classList.add("card-7");
-    cards[numbers[14]].classList.add("card-8");
-    cards[numbers[15]].classList.add("card-8");
-    cards[numbers[16]].classList.add("card-9");
-    cards[numbers[17]].classList.add("card-9");
-    cards[numbers[18]].classList.add("card-10");
-    cards[numbers[19]].classList.add("card-10");
+    // Assign card classes in pairs to all cards
+    for (let i = 0; i < cardAmount; i++) {
+        const cardType = Math.floor(i / 2) + 1; // I was not sure how to achieve this logic by repeating a number twice in a loop and used chatGPT for this solution
+        cards[numbers[i]].classList.add(`card-${cardType}`);        
+    }
 
     cards[numbers[0]].setAttribute("data-pair", "1");
     cards[numbers[1]].setAttribute("data-pair", "1");
@@ -179,7 +164,7 @@ function cardContent(cards) {
     cards[numbers[19]].setAttribute("data-pair", "10");
 
     // Assign data-selection to each card with a range of 20 unique numbers
-    for (let i = 0; i < cardAmount; ++i) { 
+    for (let i = 0; i < cardAmount; ++i) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     };
 
