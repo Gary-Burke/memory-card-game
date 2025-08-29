@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentScore = 0;
                 currentScoreCal();
             }
-        })
+        });
     }
 
     // Restart the game but cards still get randomized and best score remains
@@ -54,9 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentScore = 0;
                 currentScoreCal();
             }
-        })
+        });
     }
-})
+});
 
 /**
  * Assign blank card class to every card in order to cover content of cards.
