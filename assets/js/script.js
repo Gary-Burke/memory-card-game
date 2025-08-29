@@ -72,15 +72,20 @@ function faceDown(cards) {
  */
 function game(e) {
     let card = e.target;
-    card.classList.toggle("card-blank");
 
     if (!selection1) {
+        card.classList.toggle("card-blank");
         selection1 = card.getAttribute("data-selection");
         pair1 = card.getAttribute("data-pair");
     } else {
         selection2 = card.getAttribute("data-selection");
         pair2 = card.getAttribute("data-pair");
-        ++currentScore;
+
+        if (selection1 !== selection2) {
+            card.classList.toggle("card-blank");
+            ++currentScore;
+        }
+        
     }
 
     /* 
