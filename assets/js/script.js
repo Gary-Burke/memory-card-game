@@ -86,11 +86,6 @@ function game(e) {
         ++currentScore;
     }
 
-    console.log("selection1 :", selection1);
-    console.log("pair1 :", pair1);
-    console.log("selection2 :", selection2);
-    console.log("pair2 :", pair2);
-
     /* 
     After some research, I came across this solution from stackoverflow regarding the setTimeout function: 
     https://stackoverflow.com/a/1183886/30846754
@@ -136,37 +131,21 @@ function cardContent(cards) {
         }
     }
 
+     // Assign data-pair attribute to each card with a range of 20 unique numbers
+    for (let i = 0; i < cardAmount; ++i) {
+        cards[numbers[i]].setAttribute("data-pair", i + 1);
+    };
+
+    // Assign data-selection attribute to each card with a range of 20 unique numbers
+    for (let i = 0; i < cardAmount; ++i) {
+        cards[numbers[i]].setAttribute("data-selection", i + 1);
+    };
+
     // Assign card classes in pairs to all cards
     for (let i = 0; i < cardAmount; i++) {
         const cardType = Math.floor(i / 2) + 1; // I was not sure how to achieve this logic by repeating a number twice in a loop and used chatGPT for this solution
         cards[numbers[i]].classList.add(`card-${cardType}`);        
     }
-
-    cards[numbers[0]].setAttribute("data-pair", "1");
-    cards[numbers[1]].setAttribute("data-pair", "1");
-    cards[numbers[2]].setAttribute("data-pair", "2");
-    cards[numbers[3]].setAttribute("data-pair", "2");
-    cards[numbers[4]].setAttribute("data-pair", "3");
-    cards[numbers[5]].setAttribute("data-pair", "3");
-    cards[numbers[6]].setAttribute("data-pair", "4");
-    cards[numbers[7]].setAttribute("data-pair", "4");
-    cards[numbers[8]].setAttribute("data-pair", "5");
-    cards[numbers[9]].setAttribute("data-pair", "5");
-    cards[numbers[10]].setAttribute("data-pair", "6");
-    cards[numbers[11]].setAttribute("data-pair", "6");
-    cards[numbers[12]].setAttribute("data-pair", "7");
-    cards[numbers[13]].setAttribute("data-pair", "7");
-    cards[numbers[14]].setAttribute("data-pair", "8");
-    cards[numbers[15]].setAttribute("data-pair", "8");
-    cards[numbers[16]].setAttribute("data-pair", "9");
-    cards[numbers[17]].setAttribute("data-pair", "9");
-    cards[numbers[18]].setAttribute("data-pair", "10");
-    cards[numbers[19]].setAttribute("data-pair", "10");
-
-    // Assign data-selection to each card with a range of 20 unique numbers
-    for (let i = 0; i < cardAmount; ++i) {
-        cards[numbers[i]].setAttribute("data-selection", i + 1);
-    };
 
     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
