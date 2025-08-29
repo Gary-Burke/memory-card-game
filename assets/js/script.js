@@ -93,7 +93,7 @@ function game(e) {
     After some research, I came across this solution from stackoverflow regarding the setTimeout function: 
     https://stackoverflow.com/a/1183886/30846754
     */
-    if ((pair1 === pair2) && (selection1 !== selection2)) { // if pairs match then apply class hidden
+    if (pair1 === pair2) { // if pairs match then apply class hidden
         ++gameOver;
         setTimeout(function () {
             let pairs = document.querySelectorAll(`[data-pair='${pair1}']`);
@@ -107,7 +107,7 @@ function game(e) {
             reset();
         }, 800);
 
-    } else if (selection2 && (pair1 !== pair2)) { // If two selection have been made but don't match, reset cards and selection        
+    } else if (selection2) { // If two selection have been made but don't match, reset cards and selection        
         setTimeout(function () {
             document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
