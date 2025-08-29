@@ -77,16 +77,17 @@ function game(e) {
         card.classList.toggle("card-blank");
         selection1 = card.getAttribute("data-selection");
         pair1 = card.getAttribute("data-pair");
-    } else {
+    } else if (selection1 !== card.getAttribute("data-selection")) {
+        card.classList.toggle("card-blank");
         selection2 = card.getAttribute("data-selection");
-        pair2 = card.getAttribute("data-pair");
-
-        if (selection1 !== selection2) {
-            card.classList.toggle("card-blank");
-            ++currentScore;
-        }
-        
+        pair2 = card.getAttribute("data-pair");        
+        ++currentScore;        
     }
+
+    console.log("selection1 :", selection1);
+    console.log("pair1 :", pair1);
+    console.log("selection2 :", selection2);
+    console.log("pair2 :", pair2);
 
     /* 
     After some research, I came across this solution from stackoverflow regarding the setTimeout function: 
