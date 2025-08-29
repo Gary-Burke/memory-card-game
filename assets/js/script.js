@@ -71,19 +71,20 @@ function faceDown(cards) {
 function game(e) {
     let card = e.target;
 
-    if (!selection1) { // logs selection 1
+    if (!selection1) { // logs selection 1 if variable is an empty string
         card.classList.toggle("card-blank");
         selection1 = card.getAttribute("data-selection");
         pair1 = card.getAttribute("data-pair");
-    } else if (selection1 !== card.getAttribute("data-selection")) { // logs selection2 and ensure the same card can't be selected
+    } else if (selection1 !== card.getAttribute("data-selection")) { // logs selection2 and ensures the same card can't be selected
         card.classList.toggle("card-blank");
         selection2 = card.getAttribute("data-selection");
         pair2 = card.getAttribute("data-pair");
         ++currentScore;
     }
     currentScoreCal();
+
     /* 
-    After some research, I came across this solution from stackoverflow regarding the setTimeout function: 
+    Solution from stackoverflow regarding the setTimeout function: 
     https://stackoverflow.com/a/1183886/30846754
     */
     if (pair1 === pair2) { // if pairs match then apply class hidden
@@ -107,12 +108,11 @@ function game(e) {
             reset();
         }, 500);
     }
-
 }
 
 /**
  * Assign images via classes to cards in matching pairs
- * Generate cardAmount unique numbers to randomize to class assignment, thus randomizing the card positions in the game
+ * Generate 20 unique numbers to randomize to class assignment, thus randomizing the card positions in the game
  */
 function cardContent(cards) {
 
@@ -133,7 +133,7 @@ function cardContent(cards) {
         cards[numbers[l]].classList.add(`card-${cardType}`);
     };
 
-    // Assign data-pair attribute to each card with a range of 20 unique numbers
+    // Assign data-pair attribute to cards in pairs
     for (let j = 0; j < cardAmount; ++j) {
         const cardType = Math.floor(j / 2) + 1; // I was not sure how to achieve this logic by repeating a number twice in a loop and used chatGPT for this solution
         cards[numbers[j]].setAttribute("data-pair", cardType);
@@ -144,9 +144,7 @@ function cardContent(cards) {
         cards[numbers[k]].setAttribute("data-selection", k + 1);
     };
 
-
-
-    console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+    // console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
 
 /**
@@ -160,7 +158,7 @@ function reset() {
 }
 
 /**
- * Toggles Game Over Box on/off and resets gameOver counter
+ * Toggles Game Over Box on/off and and calculate best score
  */
 function gameOverBox() {
     document.getElementById("game-over").classList.toggle("visibility");
@@ -168,7 +166,7 @@ function gameOverBox() {
 }
 
 /** 
- * Removes all classes from cards and set each to .card only
+ * Resets all cards, gameOver and currentScore counter
  */
 function cardReset(cards) {
     for (let card of cards) {
@@ -179,14 +177,14 @@ function cardReset(cards) {
 }
 
 /** 
- * Calculate current score 
+ * Display current score 
  */
 function currentScoreCal() {
     document.querySelector("#current-score span").innerText = currentScore;
 }
 
 /** 
- * Calculate best score 
+ * Calculate best score and display accordingly
  */
 function bestScoreCal() {
     if ((currentScore < bestScore) || (bestScore === 0)) {
