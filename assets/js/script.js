@@ -7,6 +7,8 @@ let pair1 = ""; // identify which pair card belongs to
 let pair2 = ""; // identify which pair card belongs to
 let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 
+const cardAmount = 20; // Amount of cards that are used
+
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -101,7 +103,7 @@ function game(e) {
                 pair.classList.add("hidden");
             }
 
-            if (gameOver === 10) { // 20 tiles equals 10 pairs which triggers game over
+            if (gameOver === cardAmount / 2) { // 20 cards equals 10 pairs which triggers game over
                 gameOverBox();
             }
             reset();
@@ -119,7 +121,7 @@ function game(e) {
 
 /**
  * Assign images via classes to cards in matching pairs
- * Generate 20 unique numbers to randomize to class assignment, thus randomizing the card positions in the game
+ * Generate cardAmount unique numbers to randomize to class assignment, thus randomizing the card positions in the game
  */
 function cardContent(cards) {
 
@@ -127,8 +129,8 @@ function cardContent(cards) {
     // Important to start at 0 to correspond with the array indexing
     let numbers = [];
 
-    while (numbers.length < 20) {
-        var i = Math.floor(Math.random() * 20);
+    while (numbers.length < cardAmount) {
+        var i = Math.floor(Math.random() * cardAmount);
         if (!numbers.includes(i)) {
             numbers.push(i);
         }
@@ -195,7 +197,7 @@ function cardContent(cards) {
     cards[numbers[16]].setAttribute("data-selection", "17");
     cards[numbers[17]].setAttribute("data-selection", "18");
     cards[numbers[18]].setAttribute("data-selection", "19");
-    cards[numbers[19]].setAttribute("data-selection", "20");
+    cards[numbers[19]].setAttribute("data-selection", "cardAmount");
 
     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
