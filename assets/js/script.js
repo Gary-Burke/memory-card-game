@@ -197,7 +197,7 @@ function cardContent(cards) {
     cards[numbers[16]].setAttribute("data-selection", "17");
     cards[numbers[17]].setAttribute("data-selection", "18");
     cards[numbers[18]].setAttribute("data-selection", "19");
-    cards[numbers[19]].setAttribute("data-selection", "cardAmount");
+    cards[numbers[19]].setAttribute("data-selection", "20");
 
     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
