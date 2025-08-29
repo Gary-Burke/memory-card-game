@@ -29,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function (e) {
             if (this.getAttribute("data-button") === "game-over-new-game") {
-                gameOverBox();
-                gameOverReset();
+                gameOverBox();                
                 reset();
                 cardReset(cards);
                 cardContent(cards);
-                faceDown(cards);
-                currentScore = 0;
+                faceDown(cards);            
                 currentScoreCal();
             }
         });
@@ -46,12 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let icon of icons) {
         icon.addEventListener("click", function (e) {
             if (this.getAttribute("data-icon") === "restartGame") {
-                gameOverReset();
                 reset();
                 cardReset(cards);
                 cardContent(cards);
-                faceDown(cards);
-                currentScore = 0;
+                faceDown(cards);                
                 currentScoreCal();
             }
         });
@@ -178,13 +174,8 @@ function cardReset(cards) {
     for (let card of cards) {
         card.className = "card";
     }
-}
-
-/**
- * Reset gameOver counter
- */
-function gameOverReset() {
     gameOver = 0;
+    currentScore = 0;
 }
 
 /** 
