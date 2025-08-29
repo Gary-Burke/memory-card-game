@@ -178,26 +178,10 @@ function cardContent(cards) {
     cards[numbers[18]].setAttribute("data-pair", "10");
     cards[numbers[19]].setAttribute("data-pair", "10");
 
-    cards[numbers[0]].setAttribute("data-selection", "1");
-    cards[numbers[1]].setAttribute("data-selection", "2");
-    cards[numbers[2]].setAttribute("data-selection", "3");
-    cards[numbers[3]].setAttribute("data-selection", "4");
-    cards[numbers[4]].setAttribute("data-selection", "5");
-    cards[numbers[5]].setAttribute("data-selection", "6");
-    cards[numbers[6]].setAttribute("data-selection", "7");
-    cards[numbers[7]].setAttribute("data-selection", "8");
-    cards[numbers[8]].setAttribute("data-selection", "9");
-    cards[numbers[9]].setAttribute("data-selection", "10");
-    cards[numbers[10]].setAttribute("data-selection", "11");
-    cards[numbers[11]].setAttribute("data-selection", "12");
-    cards[numbers[12]].setAttribute("data-selection", "13");
-    cards[numbers[13]].setAttribute("data-selection", "14");
-    cards[numbers[14]].setAttribute("data-selection", "15");
-    cards[numbers[15]].setAttribute("data-selection", "16");
-    cards[numbers[16]].setAttribute("data-selection", "17");
-    cards[numbers[17]].setAttribute("data-selection", "18");
-    cards[numbers[18]].setAttribute("data-selection", "19");
-    cards[numbers[19]].setAttribute("data-selection", "20");
+    // Assign data-selection to each card with a range of 20 unique numbers
+    for (let i = 0; i < cardAmount; ++i) { 
+        cards[numbers[i]].setAttribute("data-selection", i + 1);
+    };
 
     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
