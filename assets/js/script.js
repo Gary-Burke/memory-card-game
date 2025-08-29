@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-    // Restart the game but cards still get randomized
+    // Restart the game but cards still get randomized and best score remains
     let icons = document.getElementsByTagName("i");
     for (let icon of icons) {
         icon.addEventListener("click", function (e) {
@@ -73,15 +73,15 @@ function faceDown(cards) {
 function game(e) {
     let card = e.target;
 
-    if (!selection1) {
+    if (!selection1) { // logs selection 1
         card.classList.toggle("card-blank");
         selection1 = card.getAttribute("data-selection");
         pair1 = card.getAttribute("data-pair");
-    } else if (selection1 !== card.getAttribute("data-selection")) {
+    } else if (selection1 !== card.getAttribute("data-selection")) { // logs selection2 and ensure the same card can't be selected
         card.classList.toggle("card-blank");
         selection2 = card.getAttribute("data-selection");
-        pair2 = card.getAttribute("data-pair");        
-        ++currentScore;        
+        pair2 = card.getAttribute("data-pair");
+        ++currentScore;
     }
 
     console.log("selection1 :", selection1);
