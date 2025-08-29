@@ -85,7 +85,7 @@ function game(e) {
         pair2 = card.getAttribute("data-pair");
         ++currentScore;
     }
-
+    currentScoreCal();
     /* 
     After some research, I came across this solution from stackoverflow regarding the setTimeout function: 
     https://stackoverflow.com/a/1183886/30846754
@@ -102,16 +102,16 @@ function game(e) {
                 gameOverBox();
             }
             reset();
-        }, 800);
+        }, 400);
 
     } else if (selection2) { // If two selection have been made but don't match, reset cards and selection        
         setTimeout(function () {
             document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
             reset();
-        }, 800);
+        }, 500);
     }
-    currentScoreCal();
+
 }
 
 /**
