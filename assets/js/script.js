@@ -127,24 +127,19 @@ function cardContent(cards) {
         }
     };
 
-    // Assign card classes in pairs to all cards
-    for (let l = 0; l < cardAmount; ++l) {
-        const cardType = Math.floor(l / 2) + 1;
-        cards[numbers[l]].classList.add(`card-${cardType}`);
-    };
-
-    // Assign data-pair attribute to cards in pairs
-    for (let j = 0; j < cardAmount; ++j) {
-        const cardType = Math.floor(j / 2) + 1; // I was not sure how to achieve this logic by repeating a number twice in a loop and used chatGPT for this solution
-        cards[numbers[j]].setAttribute("data-pair", cardType);
+    // Assign card classes and attribute data-pair in pairs to all cards
+    for (let i = 0; i < cardAmount; ++i) {
+        const cardType = Math.floor(i / 2) + 1;
+        cards[numbers[i]].classList.add(`card-${cardType}`);
+        cards[numbers[i]].setAttribute("data-pair", cardType);
     };
 
     // Assign data-selection attribute to each card with a range of 20 unique numbers
-    for (let k = 0; k < cardAmount; ++k) {
-        cards[numbers[k]].setAttribute("data-selection", k + 1);
+    for (let i = 0; i < cardAmount; ++i) {
+        cards[numbers[i]].setAttribute("data-selection", i + 1);
     };
 
-    // console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
 
 /**
