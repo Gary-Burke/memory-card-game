@@ -99,14 +99,14 @@ function game(e) {
                 gameOverBox();
             }
             reset();
-        }, 400);
+        }, 800);
 
     } else if (selection2) { // If two selection have been made but don't match, reset cards and selection        
         setTimeout(function () {
             document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
             reset();
-        }, 500);
+        }, 800);
     }
 }
 
