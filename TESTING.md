@@ -3,6 +3,27 @@
 > [!NOTE]
 > Return back to the [README.md](README.md) file.
 
+## Code Validation
+
+### HTML
+
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files and the results can also be seen in the URLs below.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| root | [index.html](https://github.com/Gary-Burke/memory-card-game/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2Findex.html) | ![screenshot](documentation/validation/html/index.png) | No errors or warnings |
+| root | [game.html](https://github.com/Gary-Burke/memory-card-game/blob/main/game.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2Fgame.html) | ![screenshot](documentation/validation/html/game.png) | No errors or warnings |
+| root | [404.html](https://github.com/Gary-Burke/memory-card-game/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2F404.html) | ![screenshot](documentation/validation/html/404.png) | No errors or warnings |
+
+
+### CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file and the results can also be seen in the URL below.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| assets | [styles.css](https://github.com/Gary-Burke/memory-card-game/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/css/css.png) | All warnings were checked and can be safely ignored, as they are based on external libraries and frameworks.
+
 ## Responsiveness
 
 I've tested my deployed project to check for responsiveness issues by using Google Chrome Dev Tools.
