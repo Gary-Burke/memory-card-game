@@ -89,6 +89,7 @@ a {
 
 .card:hover {
     box-shadow: 0 0 6px 3px var(--primary-font-color);
+    cursor: pointer;
 }
 
 .card-1 {
