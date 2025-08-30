@@ -7,6 +7,11 @@ let pair1 = ""; // identify which pair card belongs to
 let pair2 = ""; // identify which pair card belongs to
 let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 
+/* The isProcessing variable and logic applied in this webpage, is a solution from chatGPT,
+ as this still falls outside of my scope of learning and skills at the moment of coding this project.
+ */
+let isProcessing = false; // Prevent clicks during timeout 
+
 const cardAmount = 20; // Amount of cards that are used
 
 // Wait for the DOM to load before executing functions
@@ -29,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function (e) {
             if (this.getAttribute("data-button") === "game-over-new-game") {
-                gameOverBox();                
+                gameOverBox();
                 reset();
                 cardReset(cards);
                 cardContent(cards);
-                faceDown(cards);            
+                faceDown(cards);
                 currentScoreCal();
             }
         });
@@ -47,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 reset();
                 cardReset(cards);
                 cardContent(cards);
-                faceDown(cards);                
+                faceDown(cards);
                 currentScoreCal();
             }
         });
@@ -69,6 +74,8 @@ function faceDown(cards) {
  * If they don't match, then toggle card-blank class back on for both and reset selections.
  */
 function game(e) {
+    if (isProcessing) return; // Ignore clicks if processing
+
     let card = e.target;
 
     if (!selection1) { // logs selection 1 if variable is an empty string
@@ -84,10 +91,11 @@ function game(e) {
     currentScoreCal();
 
     /* 
-    Solution from stackoverflow regarding the setTimeout function: 
+    Solution from stackoverflow regarding the use of the setTimeout function: 
     https://stackoverflow.com/a/1183886/30846754
     */
     if (pair1 === pair2) { // if pairs match then apply class hidden
+        isProcessing = true;
         ++gameOver;
         setTimeout(function () {
             let pairs = document.querySelectorAll(`[data-pair='${pair1}']`);
@@ -99,13 +107,16 @@ function game(e) {
                 gameOverBox();
             }
             reset();
+            isProcessing = false; // Unlock after timeout completes
         }, 800);
 
-    } else if (selection2) { // If two selection have been made but don't match, reset cards and selection        
+    } else if (selection2) { // If two selection have been made but don't match, reset cards and selection  
+        isProcessing = true;
         setTimeout(function () {
             document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
             document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
             reset();
+            isProcessing = false; // Unlock after timeout completes
         }, 800);
     }
 }
@@ -139,7 +150,7 @@ function cardContent(cards) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     };
 
-     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+    console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
 
 /**
