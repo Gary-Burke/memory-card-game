@@ -35,3 +35,15 @@ I've tested my deployed project to check for responsiveness issues by using Goog
 | Game | ![screenshot](documentation/responsiveness/mobile-game.png) | ![screenshot](documentation/responsiveness/tablet-game.png) | ![screenshot](documentation/responsiveness/desktop-game.png) | Works as expected |
 | Game Over | ![screenshot](documentation/responsiveness/mobile-game-over.png) | ![screenshot](documentation/responsiveness/tablet-game-over.png) | ![screenshot](documentation/responsiveness/desktop-game-over.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+
+## Browser Compatibility
+
+I've tested my deployed project on three different browsers to check for compatibility issues.
+
+| Page | Chrome | Firefox | Edge | Notes |
+| --- | --- | --- | --- | --- |
+| Home | ![screenshot](documentation/browsers/chrome-index.png) | ![screenshot](documentation/browsers/firefox-index.png) | ![screenshot](documentation/browsers/edge-index.png) | Works as expected |
+| Instructions | ![screenshot](documentation/browsers/chrome-instructions.png) | ![screenshot](documentation/browsers/firefox-instructions.png) | ![screenshot](documentation/browsers/edge-instructions.png) | Works as expected |
+| Game | ![screenshot](documentation/browsers/chrome-game.png) | ![screenshot](documentation/browsers/firefox-game.png) | ![screenshot](documentation/browsers/edge-game.png) | Works as expected |
+| Game Over | ![screenshot](documentation/browsers/chrome-game-over.png) | ![screenshot](documentation/browsers/firefox-game-over.png) | ![screenshot](documentation/browsers/edge-game-over.png) | Works as expected |
+| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/edge-404.png) | Works as expected |
