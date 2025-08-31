@@ -57,3 +57,13 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Home | ![screenshot](documentation/lighthouse/mobile-index.png) | ![screenshot](documentation/lighthouse/desktop-index.png) |
 | Game | ![screenshot](documentation/lighthouse/mobile-game.png) | ![screenshot](documentation/lighthouse/desktop-game.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+
+## User Story Testing
+
+| Target | Expectation | Outcome | Screenshot | 
+| --- | --- | --- | --- | 
+| As a first-time player | I would like to be able to find instructions very easily on the home page | so that I don’t get overwhelmed or confused. | ![screenshot](documentation/features/home-page.png) |
+| As an experienced player | I would like to be able to start the game without having to read through the instructions | so that I can immediately start to have fun. | ![screenshot](documentation/features/home-page.png) |
+| As a first-time player | I would like the option of ending the game without having to complete it  | in case I get frustrated and want to start over | ![screenshot](documentation/features/header.png) |
+| As a player | there needs to be some form a visual confirmation when a matching pair has been found, so that it gets removed from the active selection choices/game | without changing the remaining card positions. | ![screenshot](documentation/features/matching-pairs.png) |
+| As an experienced player |  I would like to have a score count | so that I can try and beat my best score. | ![screenshot](documentation/features/header.png) |
