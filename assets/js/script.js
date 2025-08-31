@@ -136,19 +136,19 @@ function cardContent(cards) {
         if (!numbers.includes(i)) {
             numbers.push(i);
         }
-    };
+    }
 
     // Assign card classes and attribute data-pair in pairs to all cards
     for (let i = 0; i < cardAmount; ++i) {
         const cardType = Math.floor(i / 2) + 1;
         cards[numbers[i]].classList.add(`card-${cardType}`);
         cards[numbers[i]].setAttribute("data-pair", cardType);
-    };
+    }
 
     // Assign data-selection attribute to each card with a range of 20 unique numbers
     for (let i = 0; i < cardAmount; ++i) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
-    };
+    }
 
     console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
 }
