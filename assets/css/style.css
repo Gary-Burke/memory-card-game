@@ -154,8 +154,15 @@ a {
 
 /* Media Queries*/
 
-/* Large screen sizes - 576px up*/
+/* X-small screen sizes - upto 280px*/
+@media screen and (max-width: 280px) {
+    h1 {
+        letter-spacing: 0;
+        font-size: 1.2rem;
+    }
+}
 
+/* Small screen sizes - 576px up*/
 @media screen and (min-width: 576px) {
 
     /* Ensure cards don't get too big on bigger screens */
