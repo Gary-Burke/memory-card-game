@@ -23,7 +23,6 @@ h2 {
     font-family: var(--primary-font);
 }
 
-button,
 .button {
     background-color: var(--primary-bg-color);
     border: var(--primary-font-color) ridge 5px;
@@ -33,7 +32,7 @@ button,
     border-radius: 0;
 }
 
-button:hover {
+.button:hover {
     background-color: var(--primary-bg-color);
     border: var(--primary-font-color) ridge 5px;
     box-shadow: inset 0 0 16px 10px var(--black-color),
@@ -61,12 +60,22 @@ a {
     border-radius: 1rem;
 }
 
-.modal-content button {
+.modal-content .button {
     background-color: var(--primary-bg-color);
     border: var(--primary-font-color) ridge 2px;
     font-family: var(--primary-font);
     box-shadow: inset 0 0 8px 3px var(--black-color);
+    border-radius: 0.3rem;
 }
+
+.modal-content .button:hover {
+    background-color: var(--primary-bg-color);
+    border: var(--primary-font-color) ridge 2px;
+    font-family: var(--primary-font);
+    box-shadow: inset 0 0 8px 3px var(--black-color),
+    0 0 3px 2px var(--primary-font-color);
+}
+
 
 /* Game Page */
 
