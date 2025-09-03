@@ -80,15 +80,19 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ### Fixed Bugs
 
-[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AGary-Burke%2Fmemory-card-game%20label%3Abug&label=bugs)](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
+[![GitHub issue custom search](https://img.shields.io/github/issues-search/Gary-Burke/memory-card-game?query=is%3Aissue%20is%3Aclosed%20label%3Abug&label=Fixed%20Bugs&color=green)](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
 I've used [GitHub Issues](https://www.github.com/Gary-Burke/memory-card-game/issues) to track and manage bugs and issues during the development stages of my project.
 
-All previously closed/fixed bugs can be tracked [here](https://github.com/users/Gary-Burke/projects/7/views/1?filterQuery=bug).
+All previously closed/fixed bugs can be tracked [here](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
 
-![screenshot](documentation/testing/gh-issues-bugs.png)
+![screenshot](documentation/gh-issues/bugs.png)
 
 ### Unfixed Bugs
 
-- There are no remaining bugs or problems that I am aware of in this project and website. 
-- Even though thorough testing was executed, the possibility remains that there could still be some error or bug that has not been discovered yet.
+[![GitHub issue custom search](https://img.shields.io/github/issues-search/Gary-Burke/memory-card-game?query=is%3Aissue%2Bis%3Aopen%2Blabel%3Abug&label=Unfixed%20Bugs&color=red)](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+Any remaining open issues can be tracked [here](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+
+> [!IMPORTANT]  
+> There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
