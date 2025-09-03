@@ -21,11 +21,11 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [styles.css](https://github.com/Gary-Burke/memory-card-game/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/css/css.png) | All warnings were checked and can be safely ignored, as they are based on external libraries and frameworks.
+| assets | [styles.css](https://github.com/Gary-Burke/memory-card-game/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/css/css.png) | All warnings were checked and can be safely ignored, as they are based on CSS font variables.
 
 ### JS
 
-I have used the recommended [JS Hint](https://jshint.com/) to validate my JS code and the results can be seen below. 
+I have used the recommended [JSHint Validator](https://jshint.com/) to validate my JS code and the results can be seen below. 
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
