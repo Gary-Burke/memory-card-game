@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 // Global Variables
 let currentScore = 0;
 let bestScore = 0;
@@ -150,7 +152,8 @@ function cardContent(cards) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     }
 
-    console.log("numbers: ", numbers); // !!!!!!!!!!!!!!!! Remember to DELETE when project is done !!!!!!!!!!!!!!!!!!!!
+    //TODO: delete before submisson 
+    console.log("numbers: ", numbers);    
 }
 
 /**
