@@ -76,6 +76,11 @@ a {
     0 0 3px 2px var(--primary-font-color);
 }
 
+#author > a:hover {
+     text-decoration: underline;
+     border: none;
+     box-shadow: none;
+}
 
 /* Game Page */
 
@@ -88,7 +93,7 @@ a {
     text-shadow: 0 0 16px var(--primary-font-color);
 }
 
-#board button {
+#board header button {
     background-color: transparent;
     border: none;
     padding: 0;
