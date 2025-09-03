@@ -88,6 +88,13 @@ a {
     text-shadow: 0 0 16px var(--primary-font-color);
 }
 
+#board button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 .card {
     /* Ensure height is always equal to width */
     aspect-ratio: 1 / 1;
