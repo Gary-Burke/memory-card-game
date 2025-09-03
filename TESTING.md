@@ -74,6 +74,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | As a first-time player | I would like the option of ending the game without having to complete it  | in case I get frustrated and want to start over | ![screenshot](documentation/features/header.png) |
 | As a player | there needs to be some form a visual confirmation when a matching pair has been found, so that it gets removed from the active selection choices/game | without changing the remaining card positions. | ![screenshot](documentation/features/matching-pairs.png) |
 | As an experienced player |  I would like to have a score count | so that I can try and beat my best score. | ![screenshot](documentation/features/header.png) |
+| As a player |  it would be useful to have a home button when a 404 error message is displayed | so that I can easily navigate back. | ![screenshot](documentation/features/404.png) |
 
 ## Bugs
 
