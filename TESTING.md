@@ -29,7 +29,7 @@ I have used the recommended [JSHint Validator](https://jshint.com/) to validate 
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| assets | [script.js](https://github.com/Gary-Burke/memory-card-game/blob/main/assets/js/script.js) | ![screenshot](documentation/validation/js/js.png) | There are no errors and the warnings can be safely ignored. |
+| assets | [script.js](https://github.com/Gary-Burke/memory-card-game/blob/main/assets/js/script.js) | ![screenshot](documentation/validation/js/js.png) | There are no errors and the two warnings can be safely ignored, the code was tested and works as expected. |
 
 ## Responsiveness
 
