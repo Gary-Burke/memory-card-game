@@ -9,9 +9,7 @@ let pair1 = ""; // identify which pair card belongs to
 let pair2 = ""; // identify which pair card belongs to
 let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 
-/* The isProcessing variable and logic applied in this webpage, is a solution from chatGPT,
- as this still falls outside of my scope of learning and skills at the moment of coding this project.
- */
+// The isProcessing variable and logic applied in this webpage, is a solution from chatGPT
 let isProcessing = false; // Prevent clicks during timeout 
 
 const cardAmount = 20; // Amount of cards that are used
@@ -83,10 +81,7 @@ function game(e) {
     }
     currentScoreCal();
 
-    /* 
-    Solution from stackoverflow regarding the use of the setTimeout function: 
-    https://stackoverflow.com/a/1183886/30846754
-    */
+    // Solution regarding the use of the setTimeout function: https://stackoverflow.com/a/1183886/30846754
     if (pair1 === pair2) { // if pairs match then apply class hidden
         isProcessing = true;
         ++gameOver;
