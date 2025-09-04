@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start a new game when the current one has been completed
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
-        button.addEventListener("click", function (e) {
+        button.addEventListener("click", function () {
             if (this.getAttribute("data-button") === "game-over-new-game") {
                 newGame(cards);
             }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Restart the game but cards still get randomized and best score remains
     let icons = document.getElementsByTagName("i");
     for (let icon of icons) {
-        icon.addEventListener("click", function (e) {
+        icon.addEventListener("click", function () {
             if (this.getAttribute("data-icon") === "restartGame") {
                 restartGame(cards);
             }
