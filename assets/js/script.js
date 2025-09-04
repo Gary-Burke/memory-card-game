@@ -2,7 +2,7 @@
 
 // Global Variables
 let currentScore = 0; // Counter to determine the current live score
-let bestScore = localStorage.getItem("bestScore") || 0; // Assign value from local storage or zero if no stored value
+let bestScore = Number(localStorage.getItem("bestScore")) || 0; // Assign value from local storage or zero if no stored value
 let selection1 = ""; // identify which card was selected 1st
 let selection2 = ""; // identify which card was selected 2nd
 let pair1 = ""; // identify which pair card belongs to
@@ -177,17 +177,26 @@ function currentScoreCal() {
 }
 
 /** 
- * Calculate best score and display accordingly
+ * Calculate best score and display messages accordingly
  */
 function bestScoreCal() {
+    let message = "";
+    
     if ((currentScore < bestScore) || (bestScore === 0)) {
         bestScore = currentScore;
         localStorage.setItem("bestScore", `${bestScore}`);
         document.querySelector("#best-score span").innerText = bestScore;
-        document.querySelector("#game-over p").innerText = "You have set a NEW Best Score!";
+        message = "You have set a NEW Best Score!";
+
+    } else if ((currentScore >= bestScore) && (currentScore <= (bestScore + 3))) {
+        message = "That was ALMOST a new score!";
+    } else if ((currentScore >= (bestScore + 4)) && (currentScore <= (bestScore + 7))) {
+        message = "That was a GOOD effort!";
     } else {
-        document.querySelector("#game-over p").innerText = "You have finished the game.";
+        message = "Winning isn't everything...";
     }
+
+    document.querySelector("#game-over p").innerText = message;
 }
 
 /** 
