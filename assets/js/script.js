@@ -46,11 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let icon of icons) {
         icon.addEventListener("click", function (e) {
             if (this.getAttribute("data-icon") === "restartGame") {
-                reset();
-                cardReset(cards);
-                cardContent(cards);
-                faceDown(cards);
-                currentScoreCal();
+                restartGame(cards);
             }
         });
     }
@@ -201,7 +197,7 @@ function bestScoreCal() {
 }
 
 /** 
- * Resets all classes and values but keeps best score
+ * When the game is done, it resets all classes and values but keeps best score, i.e starts a new game
  */
 function newGame(cards) {
     gameOverBox();
@@ -209,5 +205,16 @@ function newGame(cards) {
     cardReset(cards);
     cardContent(cards);
     faceDown(cards);
-    currentScoreCal();                                                                   
+    currentScoreCal();
+}
+
+/**
+ * Starts a new game without finishing current one. Resets all classes and values but keeps best score, i.e starts a new game
+ */
+function restartGame(cards) {
+    reset();
+    cardReset(cards);
+    cardContent(cards);
+    faceDown(cards);
+    currentScoreCal();
 }
