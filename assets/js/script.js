@@ -1,28 +1,26 @@
 /* jshint esversion: 11 */
 
 // Global Variables
-let currentScore = 0;
-let bestScore = 0;
+let currentScore = 0; // Counter to determine the current live score
+let bestScore = localStorage.getItem("bestScore") || 0; // Assign value from local storage or zero if no stored value
 let selection1 = ""; // identify which card was selected 1st
 let selection2 = ""; // identify which card was selected 2nd
 let pair1 = ""; // identify which pair card belongs to
 let pair2 = ""; // identify which pair card belongs to
 let gameOver = 0; // Counter to determine when game is completed, 10 = completed
-
-// The isProcessing variable and logic applied in this webpage, is a solution from chatGPT
-let isProcessing = false; // Prevent clicks during timeout 
+let isProcessing = false; // Prevent clicks during timeout - solution from chatGPT
 
 const cardAmount = 20; // Amount of cards that are used
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
+    currentScoreCal();
+    document.querySelector("#best-score span").innerText = bestScore;
 
     // Get the card elements and assign them to html collection "cards"
     let cards = document.getElementsByClassName("card");
     cardContent(cards);
     faceDown(cards);
-    currentScoreCal();
-    bestScoreCal();
 
     // Add event listener to each card when clicked to execute game action
     for (let card of cards) {
@@ -115,7 +113,7 @@ function game(e) {
  */
 function cardContent(cards) {
 
-    // Generate 20 unique numbers between 0 - 19 for the 20 cards
+    // Generate 20 unique numbers between 0 - 19 for the 20 cards - inspiration from CI Lotto numbers challenge
     // Important to start at 0 to correspond with the array indexing
     let numbers = [];
 
@@ -184,6 +182,7 @@ function currentScoreCal() {
 function bestScoreCal() {
     if ((currentScore < bestScore) || (bestScore === 0)) {
         bestScore = currentScore;
+        localStorage.setItem("bestScore", `${bestScore}`);
         document.querySelector("#best-score span").innerText = bestScore;
         document.querySelector("#game-over p").innerText = "You have set a NEW Best Score!";
     } else {
