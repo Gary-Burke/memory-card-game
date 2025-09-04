@@ -75,6 +75,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | As a player | there needs to be some form a visual confirmation when a matching pair has been found, so that it gets removed from the active selection choices/game | without changing the remaining card positions. | ![screenshot](documentation/features/matching-pairs.png) |
 | As an experienced player |  I would like to have a score count | so that I can try and beat my best score. | ![screenshot](documentation/features/header.png) |
 | As a player |  it would be useful to have a home button when a 404 error message is displayed | so that I can easily navigate back. | ![screenshot](documentation/features/404.png) |
+| As a player | it would be amusing to see a different type of message displayed | depending on the final score. | ![screenshot](documentation/features/game-over-alt.png) |
 
 ## Bugs
 
@@ -95,4 +96,4 @@ All previously closed/fixed bugs can be tracked [here](https://www.github.com/Ga
 Any remaining open issues can be tracked [here](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
 > [!IMPORTANT]  
-> There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
+> There are no remaining bugs that I am aware of, though, even after thor
