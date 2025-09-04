@@ -36,12 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function (e) {
             if (this.getAttribute("data-button") === "game-over-new-game") {
-                gameOverBox();
-                reset();
-                cardReset(cards);
-                cardContent(cards);
-                faceDown(cards);
-                currentScoreCal();
+                newGame(cards);
             }
         });
     }
@@ -153,7 +148,7 @@ function cardContent(cards) {
     }
 
     //TODO: delete before submisson 
-    console.log("numbers: ", numbers);    
+    console.log("numbers: ", numbers);
 }
 
 /**
@@ -203,4 +198,16 @@ function bestScoreCal() {
     } else {
         document.querySelector("#game-over p").innerText = "You have finished the game.";
     }
+}
+
+/** 
+ * Resets all classes and values but keeps best score
+ */
+function newGame(cards) {
+    gameOverBox();
+    reset();
+    cardReset(cards);
+    cardContent(cards);
+    faceDown(cards);
+    currentScoreCal();                                                                   
 }
