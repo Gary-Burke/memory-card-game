@@ -28,14 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Start a new game when the current one has been completed
-    let buttons = document.getElementsByTagName("button");
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-button") === "game-over-new-game") {
-                newGame(cards);
-            }
-        });
-    }
+    let newGameButton = document.querySelector('button[data-button="game-over-new-game"]');
+    newGameButton.addEventListener("click", () => {
+        newGame(cards);
+    });
 
     // Restart the game but cards still get randomized and best score remains
     let icons = document.getElementsByTagName("i");
@@ -181,7 +177,7 @@ function currentScoreCal() {
  */
 function bestScoreCal() {
     let message = "";
-    
+
     if ((currentScore < bestScore) || (bestScore === 0)) {
         bestScore = currentScore;
         localStorage.setItem("bestScore", `${bestScore}`);
