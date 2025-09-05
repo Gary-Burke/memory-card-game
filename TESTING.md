@@ -65,6 +65,14 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Game | ![screenshot](documentation/lighthouse/mobile-game.png) | ![screenshot](documentation/lighthouse/desktop-game.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
 
+## Defensive Programming
+Defensive programming was manually tested and implemented for the following scenarios:
+> [!NOTE]
+> No screenshots have been provided, as this is a dynamic testing, which can't be shown by static screenshots.
+
+- The game should block/ignore all clicks from the player, if the player clicks on the same card repetitively.
+- The game should block/ignore all clicks from the player, while the cards are being turned around.
+
 ## User Story Testing
 
 | Target | Expectation | Outcome | Screenshot | 
