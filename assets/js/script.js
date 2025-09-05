@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let newGameButton = document.querySelector('button[data-button="game-over-new-game"]');
     newGameButton.addEventListener("click", () => {
         newGame(cards);
+        document.getElementById("restartGameButton").classList.toggle("visibility");
     });
 
     // Restart the game but cards still get randomized and best score remains
@@ -83,6 +84,7 @@ function game(e) {
 
             if (gameOver === cardAmount / 2) { // 20 cards equals 10 pairs which triggers game over
                 gameOverBox();
+                document.getElementById("restartGameButton").classList.toggle("visibility");
             }
             reset();
             isProcessing = false; // Unlock after timeout completes
@@ -127,7 +129,6 @@ function cardContent(cards) {
     for (let i = 0; i < cardAmount; ++i) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     }
-
 }
 
 /**
