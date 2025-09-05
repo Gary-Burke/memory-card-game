@@ -34,14 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Restart the game but cards still get randomized and best score remains
-    let icons = document.getElementsByTagName("i");
-    for (let icon of icons) {
-        icon.addEventListener("click", function () {
-            if (this.getAttribute("data-icon") === "restartGame") {
-                restartGame(cards);
-            }
-        });
-    }
+    let restartGameButton = document.querySelector(`i[data-icon="restartGame"]`);
+    restartGameButton.addEventListener("click", () => {
+        restartGame(cards);
+    });
 });
 
 /**
