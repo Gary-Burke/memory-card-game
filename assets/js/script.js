@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let newGameButton = document.querySelector('button[data-button="game-over-new-game"]');
     newGameButton.addEventListener("click", () => {
         newGame(cards);
-        document.getElementById("restartGameButton").classList.toggle("visibility");
+        document.getElementById("restart-game-button").classList.toggle("visibility");
     });
 
     // Restart the game but cards still get randomized and best score remains
@@ -85,7 +85,7 @@ function game(e) {
 
             if (gameOver === cardAmount / 2) { // 20 cards equals 10 pairs which triggers game over
                 gameOverBox();
-                document.getElementById("restartGameButton").classList.toggle("visibility");
+                document.getElementById("restart-game-button").classList.toggle("visibility");
             }
             reset();
             isProcessing = false; // Unlock after timeout completes
@@ -228,6 +228,6 @@ function createCards() {
         card.classList.add("card");
 
         cardDiv.appendChild(card); // add card inside the col div
-        document.getElementById("cardGrid").appendChild(cardDiv); // add col to the grid
+        document.getElementById("card-grid").appendChild(cardDiv); // add col to the grid
     }
 }
