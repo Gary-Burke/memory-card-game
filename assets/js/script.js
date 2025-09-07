@@ -14,6 +14,7 @@ const cardAmount = 20; // Amount of cards that are used
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
+    createCards();
     currentScoreCal();
     document.querySelector("#best-score span").innerText = bestScore;
 
@@ -129,6 +130,8 @@ function cardContent(cards) {
     for (let i = 0; i < cardAmount; ++i) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     }
+
+    console.log(numbers); // TODO: Delete
 }
 
 /**
@@ -206,9 +209,27 @@ function newGame(cards) {
  * Starts a new game without finishing current one. Resets all classes and values but keeps best score, i.e starts a new game
  */
 function restartGame(cards) {
-    reset();
+    reset();    
     cardReset(cards);
     cardContent(cards);
     faceDown(cards);
     currentScoreCal();
+}
+
+/**
+ * Create card elements based on cardAmount
+ * Assign Bootstrap class col for responsiveness
+ * Assign class Card for CSS
+ */
+function createCards() {
+    for (let i = 1; i <= cardAmount; ++i) {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("col");
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        cardDiv.appendChild(card); // add card inside the col div
+        document.getElementById("cardGrid").appendChild(cardDiv); // add col to the grid
+    }
 }
