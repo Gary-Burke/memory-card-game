@@ -175,7 +175,7 @@ a {
 
 /* Media Queries*/
 
-/* X-small screen sizes - upto 280px*/
+/* X-small screen sizes - up to 280px*/
 @media screen and (max-width: 280px) {
     h1 {
         letter-spacing: 0;
