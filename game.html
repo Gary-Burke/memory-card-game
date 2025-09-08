@@ -32,7 +32,7 @@
                     <h1 class="m-0">MEMORY</h1>
                 </a>
             </div>
-            <div id="restart-game-button" class="ms-4 ms-sm-5">
+            <div id="restart-game-button" class="ms-4 ms-sm-5 visibility">
                 <button class="fs-1" aria-label="Restart Game">
                     <i class="fa-solid fa-rotate-right" data-icon="restart-game"></i>
                 </button>
@@ -40,7 +40,7 @@
         </div>
 
         <!-- Scores -->
-        <div class="row justify-content-evenly my-2">
+        <div id="scores" class="row justify-content-evenly my-2 hidden">
             <p id="current-score" class="col-6 col-md-4 col-lg-6">Current Score: <span></span></p>
             <p id="best-score" class="col-6 col-md-4 col-lg-6">Best Score: <span></span></p>
         </div>
@@ -53,6 +53,13 @@
             <p class="h4 my-3"></p>
             <button data-button="game-over-new-game" class="col-8 col-xl-6 py-3 fs-5 my-3 button">New
                 Game</button>
+        </div>
+
+        <!-- Backside Pattern Selectors -->
+        <div id="backside-selection" class="row justify-content-evenly col-10 mx-auto">
+            <h2 class="col-12 mb-5">Choose your deck of cards:</h2>
+            <button data-pattern="backside-1" class="col-5 col-md-4 col-xl-3 backside-1 mb-3 selector"></button>
+            <button data-pattern="backside-2" class="col-5 col-md-4 col-xl-3 backside-2 mb-3 selector"></button>            
         </div>
 
         <!-- Board with cards -->
