@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     currentScoreCal();
     document.querySelector("#best-score span").innerText = bestScore;
 
+    let patternButtons = document.querySelectorAll(`#backside-selection button`);
+    for (let button of patternButtons) {
+        button.addEventListener("click", backSideContent);
+    }
+    
     // Get the card elements and assign them to html collection "cards"
     let cards = document.getElementsByClassName("card");
     cardContent(cards);
