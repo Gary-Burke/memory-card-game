@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     newGameButton.addEventListener("click", () => {
         gameOverBox();
         document.getElementById("backside-selection").classList.toggle("visibility");
-
-
     });
 
     // Restart the game but cards still get randomized and best score remains
@@ -131,7 +129,7 @@ function cardContent(cards) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     }
 
-    console.log(numbers);
+    console.log(numbers); // TODO: Delete
 }
 
 /**
@@ -189,7 +187,6 @@ function bestScoreCal() {
     } else {
         message = "Winning isn't everything...";
     }
-
     document.querySelector("#game-over p").innerText = message;
 }
 
@@ -237,7 +234,6 @@ function backSideContent(e) {
     }
     document.getElementById("backside-selection").classList.toggle("visibility");
     document.getElementById("restart-game-button").classList.toggle("visibility");
-
 
     let cards = document.getElementsByClassName("card");
 
