@@ -83,6 +83,9 @@ a {
 }
 
 /* Game Page */
+#backside-selection h2 {
+    letter-spacing: 0;
+}
 
 #board i {
     color: var(--primary-font-color);
@@ -100,15 +103,17 @@ a {
     margin: 0;
 }
 
-.card {
+.card,
+.selector {
     /* Ensure height is always equal to width */
     aspect-ratio: 1 / 1;
     border: var(--black-color) 1px solid;
     border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px 2px var(--black-color);
+    box-shadow: 2px 2px 2px 2px var(--black-color);   
 }
 
-.card:hover {
+.card:hover,
+.selector:hover {
     box-shadow: 0 0 6px 3px var(--primary-font-color);
     cursor: pointer;
 }
@@ -153,8 +158,12 @@ a {
     background: url("../images/view-golf-sport-equipment.webp") no-repeat 0px 0px / cover;
 }
 
-.card-blank {
-    background: url("../images/card-back.webp") no-repeat 0px 0px / cover;
+.backside-1 {
+    background: url("../images/backside-1.webp") no-repeat 0px 0px / cover;
+}
+
+.backside-2 {
+    background: url("../images/backside-2.webp") no-repeat 0px 0px / cover;
 }
 
 .hidden {
