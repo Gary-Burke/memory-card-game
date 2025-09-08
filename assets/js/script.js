@@ -15,7 +15,7 @@ const cardAmount = 20; // Amount of cards that are used
 
 // Wait for the DOM to load before executing functions
 document.addEventListener("DOMContentLoaded", function () {
-    createCards();
+
     currentScoreCal();
     document.querySelector("#best-score span").innerText = bestScore;
 
@@ -23,23 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of patternButtons) {
         button.addEventListener("click", backSideContent);
     }
-    
-    // Get the card elements and assign them to html collection "cards"
-    let cards = document.getElementsByClassName("card");
-    cardContent(cards);
-    faceDown(cards);
 
-    // Add event listener to each card when clicked to execute game action
-    for (let card of cards) {
-        card.addEventListener("click", game);
-    }
+    let cards = document.getElementsByClassName("card");
 
     // Start a new game when the current one has been completed
     let newGameButton = document.querySelector('button[data-button="game-over-new-game"]');
     newGameButton.addEventListener("click", () => {
         gameOverBox();
-        newGame(cards);
-        document.getElementById("restart-game-button").classList.toggle("visibility");
+        document.getElementById("backside-selection").classList.toggle("visibility");
+
+
     });
 
     // Restart the game but cards still get randomized and best score remains
@@ -59,9 +52,9 @@ function faceDown(cards) {
 }
 
 /** 
- * Event listener click toggles card-blank class off.
+ * Event listener click toggles backSide class off.
  * Logs two selections of cards. If they match, then apply class hidden to both.
- * If they don't match, then toggle card-blank class back on for both and reset selections.
+ * If they don't match, then toggle backSide class back on for both and reset selections.
  */
 function game(e) {
     if (isProcessing) return; // Ignore clicks if processing
@@ -137,6 +130,8 @@ function cardContent(cards) {
     for (let i = 0; i < cardAmount; ++i) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     }
+
+    console.log(numbers);
 }
 
 /**
@@ -226,7 +221,6 @@ function createCards() {
         document.getElementById("card-grid").appendChild(cardDiv); // add col to the grid
     }
 }
-
 
 /**
  * Logs backside pattern choice from user
