@@ -128,8 +128,6 @@ function cardContent(cards) {
     for (let i = 0; i < cardAmount; ++i) {
         cards[numbers[i]].setAttribute("data-selection", i + 1);
     }
-
-    console.log(numbers); // TODO: Delete
 }
 
 /**
