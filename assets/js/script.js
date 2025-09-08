@@ -246,7 +246,7 @@ function backSideContent(e) {
         let cards = document.getElementsByClassName("card");
         cardContent(cards);
         faceDown(cards);
-        document.getElementById("scores").classList.toggle("hidden");
+        document.getElementById("scores").classList.toggle("visibility");
         for (let card of cards) {
             card.addEventListener("click", game);
         }
