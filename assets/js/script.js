@@ -9,6 +9,7 @@ let pair1 = ""; // identify which pair card belongs to
 let pair2 = ""; // identify which pair card belongs to
 let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 let isProcessing = false; // Prevent clicks during timeout - solution from chatGPT
+let backSide = ""; // Input from user to choose backside pattern
 
 const cardAmount = 20; // Amount of cards that are used
 
@@ -196,7 +197,7 @@ function bestScoreCal() {
  * Resets all classes and values for cards, i.e starts a new game
  */
 function newGame(cards) {
-    reset();    
+    reset();
     cardReset(cards);
     cardContent(cards);
     faceDown(cards);
@@ -218,5 +219,39 @@ function createCards() {
 
         cardDiv.appendChild(card); // add card inside the col div
         document.getElementById("card-grid").appendChild(cardDiv); // add col to the grid
+    }
+}
+
+
+/**
+ * Logs backside pattern choice from user
+ * Toggles selectors visibility from html structure when user chooses
+ * Checks if cards are already created
+ * If cards exist, then run function newGame
+ * If no cards exists, create them and assign card classes
+ */
+function backSideContent(e) {
+    if (e.currentTarget.getAttribute("data-pattern") === "backside-1") {
+        backSide = "backside-1";
+    } else {
+        backSide = "backside-2";
+    }
+    document.getElementById("backside-selection").classList.toggle("visibility");
+    document.getElementById("restart-game-button").classList.toggle("visibility");
+
+
+    let cards = document.getElementsByClassName("card");
+
+    if (cards.length === cardAmount) {
+        newGame(cards);
+    } else {
+        createCards();
+        let cards = document.getElementsByClassName("card");
+        cardContent(cards);
+        faceDown(cards);
+        document.getElementById("scores").classList.toggle("hidden");
+        for (let card of cards) {
+            card.addEventListener("click", game);
+        }
     }
 }
