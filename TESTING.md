@@ -107,4 +107,4 @@ All previously closed/fixed bugs can be tracked [here](https://www.github.com/Ga
 Any remaining open issues can be tracked [here](https://www.github.com/Gary-Burke/memory-card-game/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
 > [!IMPORTANT]  
-> There are no remaining bugs that I am aware of, though, even after thor
+> There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
