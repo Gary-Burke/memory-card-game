@@ -80,6 +80,7 @@ Defensive programming was manually tested and implemented for the following scen
 | --- | --- | --- | --- | 
 | As a first-time player | I would like to be able to find instructions very easily on the home page | so that I don’t get overwhelmed or confused. | ![screenshot](documentation/features/home-page.png) |
 | As an experienced player | I would like to be able to start the game without having to read through the instructions | so that I can immediately start to have fun. | ![screenshot](documentation/features/home-page.png) |
+| As a player | I would like to be able to change the back side pattern of the cards | this would be a fun experience. | ![screenshot](documentation/features/backside-pattern.png) |
 | As a first-time player | I would like the option of ending the game without having to complete it  | in case I get frustrated and want to start over | ![screenshot](documentation/features/header.png) |
 | As a player | there needs to be some form a visual confirmation when a matching pair has been found, so that it gets removed from the active selection choices/game | without changing the remaining card positions. | ![screenshot](documentation/features/matching-pairs.png) |
 | As an experienced player |  I would like to have a score count | so that I can try and beat my best score. | ![screenshot](documentation/features/header.png) |
