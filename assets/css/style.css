@@ -166,6 +166,10 @@ a {
     background: url("../images/backside-2.webp") no-repeat 0px 0px / cover;
 }
 
+.backside-3 {
+    background: url("../images/backside-3.webp") no-repeat 0px 0px / cover;
+}
+
 .hidden {
     visibility: hidden;
 }
