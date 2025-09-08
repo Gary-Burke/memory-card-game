@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Restart the game but cards still get randomized and best score remains
-    let restartGameButton = document.querySelector(`i[data-icon="restartGame"]`);
+    let restartGameButton = document.querySelector(`i[data-icon="restart-game"]`);
     restartGameButton.addEventListener("click", () => {
         restartGame(cards);
     });
