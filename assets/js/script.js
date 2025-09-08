@@ -229,8 +229,10 @@ function createCards() {
 function backSideContent(e) {
     if (e.currentTarget.getAttribute("data-pattern") === "backside-1") {
         backSide = "backside-1";
-    } else {
+    } else if (e.currentTarget.getAttribute("data-pattern") === "backside-2") {
         backSide = "backside-2";
+    } else {
+        backSide = "backside-3";
     }
     document.getElementById("backside-selection").classList.toggle("visibility");
     document.getElementById("restart-game-button").classList.toggle("visibility");
