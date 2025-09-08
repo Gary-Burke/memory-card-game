@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start a new game when the current one has been completed
     let newGameButton = document.querySelector('button[data-button="game-over-new-game"]');
     newGameButton.addEventListener("click", () => {
+        gameOverBox();
         newGame(cards);
         document.getElementById("restart-game-button").classList.toggle("visibility");
     });
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Restart the game but cards still get randomized and best score remains
     let restartGameButton = document.querySelector(`i[data-icon="restart-game"]`);
     restartGameButton.addEventListener("click", () => {
-        restartGame(cards);
+        newGame(cards);
     });
 });
 
@@ -191,22 +192,10 @@ function bestScoreCal() {
     document.querySelector("#game-over p").innerText = message;
 }
 
-/** 
- * When the game is done, it resets all classes and values but keeps best score, i.e starts a new game
+/**
+ * Resets all classes and values for cards, i.e starts a new game
  */
 function newGame(cards) {
-    gameOverBox();
-    reset();
-    cardReset(cards);
-    cardContent(cards);
-    faceDown(cards);
-    currentScoreCal();
-}
-
-/**
- * Starts a new game without finishing current one. Resets all classes and values but keeps best score, i.e starts a new game
- */
-function restartGame(cards) {
     reset();    
     cardReset(cards);
     cardContent(cards);
