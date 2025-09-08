@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function faceDown(cards) {
     for (let card of cards) {
-        card.classList.add("card-blank");
+        card.classList.add(backSide);
     }
 }
 
@@ -69,11 +69,11 @@ function game(e) {
     let card = e.target;
 
     if (!selection1) { // logs selection 1 if variable is an empty string
-        card.classList.toggle("card-blank");
+        card.classList.toggle(backSide);
         selection1 = card.getAttribute("data-selection");
         pair1 = card.getAttribute("data-pair");
     } else if (selection1 !== card.getAttribute("data-selection")) { // logs selection2 and ensures the same card can't be selected
-        card.classList.toggle("card-blank");
+        card.classList.toggle(backSide);
         selection2 = card.getAttribute("data-selection");
         pair2 = card.getAttribute("data-pair");
         ++currentScore;
@@ -101,8 +101,8 @@ function game(e) {
     } else if (selection2) { // If two selection have been made but don't match, reset cards and selection  
         isProcessing = true;
         setTimeout(function () {
-            document.querySelector(`[data-selection='${selection1}']`).classList.toggle("card-blank");
-            document.querySelector(`[data-selection='${selection2}']`).classList.toggle("card-blank");
+            document.querySelector(`[data-selection='${selection1}']`).classList.toggle(backSide);
+            document.querySelector(`[data-selection='${selection2}']`).classList.toggle(backSide);
             reset();
             isProcessing = false; // Unlock after timeout completes
         }, 800);
