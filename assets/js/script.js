@@ -3,10 +3,10 @@
 // Global Variables
 let currentScore = 0; // Counter to determine the current live score
 let bestScore = Number(localStorage.getItem("bestScore")) || 0; // Assign value from local storage or zero if no stored value
-let selection1 = ""; // identify which card was selected 1st
-let selection2 = ""; // identify which card was selected 2nd
-let pair1 = ""; // identify which pair card belongs to
-let pair2 = ""; // identify which pair card belongs to
+let selection1 = ""; // Identify which card was selected 1st
+let selection2 = ""; // Identify which card was selected 2nd
+let pair1 = ""; // Identify which pair card belongs to
+let pair2 = ""; // Identify which pair card belongs to
 let gameOver = 0; // Counter to determine when game is completed, 10 = completed
 let isProcessing = false; // Prevent clicks during timeout - solution from chatGPT
 let backSide = ""; // Input from user to choose backside pattern
@@ -72,7 +72,7 @@ function game(e) {
     currentScoreCal();
 
     // Solution regarding the use of the setTimeout function: https://stackoverflow.com/a/1183886/30846754
-    if (pair1 === pair2) { // if pairs match then apply class hidden
+    if (pair1 === pair2) {
         isProcessing = true;
         ++gameOver;
         setTimeout(function () {
@@ -212,17 +212,15 @@ function createCards() {
         const card = document.createElement("div");
         card.classList.add("card");
 
-        cardDiv.appendChild(card); // add card inside the col div
-        document.getElementById("card-grid").appendChild(cardDiv); // add col to the grid
+        cardDiv.appendChild(card); // Add card inside the col div
+        document.getElementById("card-grid").appendChild(cardDiv); // Add col to the grid
     }
 }
 
 /**
- * Logs backside pattern choice from user
- * Toggles selectors visibility from html structure when user chooses
- * Checks if cards are already created
- * If cards exist, then run function newGame
- * If no cards exists, create them and assign card classes
+ * Logs backside pattern choice from user.
+ * Either creates a set of cards or starts a new game.
+ * New game will have the selected backside pattern from user input.
  */
 function backSideContent(e) {
     if (e.currentTarget.getAttribute("data-pattern") === "backside-1") {
