@@ -87,7 +87,7 @@ function game(e) {
             }
             reset();
             isProcessing = false; // Unlock after timeout completes
-        }, 800);
+        }, 500);
 
     } else if (selection2) { // If two selection have been made but don't match, reset cards and selection  
         isProcessing = true;
