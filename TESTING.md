@@ -7,17 +7,17 @@
 
 ### HTML
 
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files and the results can also be seen in the URLs below.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files, and the results can also be seen in the URLs below.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| root | [index.html](https://github.com/Gary-Burke/memory-card-game/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2Findex.html) | ![screenshot](documentation/validation/html/index.png) | No errors or warnings. However the console reports a warning for aria-hidden on an element but this is due to the Bootstrap modal but it's used correctly. |
+| root | [index.html](https://github.com/Gary-Burke/memory-card-game/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2Findex.html) | ![screenshot](documentation/validation/html/index.png) | No errors or warnings. However, the console reports a warning for aria-hidden on an element, but this is due to the Bootstrap modal but it is used correctly. |
 | root | [game.html](https://github.com/Gary-Burke/memory-card-game/blob/main/game.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2Fgame.html) | ![screenshot](documentation/validation/html/game.png) | No errors or warnings |
 | root | [404.html](https://github.com/Gary-Burke/memory-card-game/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgary-burke.github.io%2Fmemory-card-game%2F404.html) | ![screenshot](documentation/validation/html/404.png) | No errors or warnings |
 
 ### CSS
 
-I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file and the results can also be seen in the URL below.
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file, and the results can also be seen in the URL below.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
@@ -25,7 +25,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JS
 
-I have used the recommended [JSHint Validator](https://jshint.com/) to validate my JS code and the results can be seen below. 
+I have used the recommended [JSHint Validator](https://jshint.com/) to validate my JS code, and the results can be seen below. 
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
@@ -70,10 +70,10 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 ## Defensive Programming
 Defensive programming was manually tested and implemented for the following scenarios:
 > [!NOTE]
-> No screenshots have been provided, as this is a dynamic testing, which can't be shown by static screenshots.
+> No screenshots have been provided, as this is dynamic testing, which can't be shown by static screenshots.
 
-- The game should block/ignore all clicks from the player, if the player clicks on the same card repetitively.
-- The game should block/ignore all clicks from the player, while the cards are being turned around.
+- The game should block/ignore all clicks from the player if the player clicks on the same card repetitively.
+- The game should block/ignore all clicks from the player while the cards are being turned around.
 
 ## User Story Testing
 
@@ -83,7 +83,7 @@ Defensive programming was manually tested and implemented for the following scen
 | As an experienced player | I would like to be able to start the game without having to read through the instructions | so that I can immediately start to have fun. | ![screenshot](documentation/features/home-page.png) |
 | As a player | I would like to be able to change the back side pattern of the cards | this would be a fun experience. | ![screenshot](documentation/features/backside-pattern.png) |
 | As a first-time player | I would like the option of ending the game without having to complete it  | in case I get frustrated and want to start over | ![screenshot](documentation/features/header.png) |
-| As a player | there needs to be some form a visual confirmation when a matching pair has been found, so that it gets removed from the active selection choices/game | without changing the remaining card positions. | ![screenshot](documentation/features/matching-pairs.png) |
+| As a player | there needs to be some form of visual confirmation when a matching pair has been found, so that it gets removed from the active selection choices/game | without changing the remaining card positions. | ![screenshot](documentation/features/matching-pairs.png) |
 | As an experienced player |  I would like to have a score count | so that I can try and beat my best score. | ![screenshot](documentation/features/header.png) |
 | As a player |  it would be useful to have a home button when a 404 error message is displayed | so that I can easily navigate back. | ![screenshot](documentation/features/404.png) |
 | As a player | it would be amusing to see a different type of message displayed | depending on the final score. | ![screenshot](documentation/features/game-over-alt.png) |
