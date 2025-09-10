@@ -192,11 +192,14 @@ function bestScoreCal() {
  * Resets all classes and values for cards, i.e starts a new game
  */
 function newGame(cards) {
+    if (isProcessing) return;
+    isProcessing = true;
     reset();
     cardReset(cards);
     cardContent(cards);
     faceDown(cards);
     currentScoreCal();
+    isProcessing = false;
 }
 
 /**
